@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Ng Hang game artist portfolio featuring character art, cinematic game scenes, UI concepts, and storytelling artwork." />
+  <title>Ng Hang | Game Artist Portfolio</title>
+  <link rel="icon"
+    href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="%2301011e"/><text x="32" y="41" font-size="28" text-anchor="middle" fill="white" font-family="Arial" font-weight="700">N</text></svg>' />
+  <link rel="preload" href="assets/artwork/constellations-bg.jpg" as="image" />
+  <link rel="preload" href="assets/artwork/hero-orbit.png" as="image" />
+  <link rel="stylesheet" href="css/output.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to portfolio</a>
+
+  <div class="loader" data-loader aria-hidden="true">
+    <div class="loader__mark">
+      <p class="eyebrow mb-5">Loading portfolio</p>
+      <img class="hero-logo mx-auto mb-8 w-full max-w-[360px]" src="assets/artwork/hero-logo-plaque.png" width="1024"
+        height="603" alt="" />
+      <div class="loader__bar"><span></span></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+  <div class="cursor" data-cursor aria-hidden="true"></div>
+
+  <header class="site-header fixed inset-x-0 top-0 z-50 border-b border-white/0" data-header>
+    <nav class="shell flex min-h-20 items-center justify-between gap-6" aria-label="Primary navigation">
+      <a class="group flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-aura"
+        href="#home">
+        <span
+          class="grid size-9 place-items-center border border-aura/40 bg-aura/10 font-display text-lg text-white shadow-aura">N</span>
+        <span>
+          <span class="block text-sm font-bold uppercase tracking-[0.22em] text-white">Ng Hang</span>
+          <span class="block text-[0.65rem] uppercase tracking-[0.28em] text-aura/80">Game Artist</span>
+        </span>
+      </a>
+
+      <div class="hidden items-center gap-8 md:flex">
+        <a class="nav-link is-active" data-nav-link href="#home">Start</a>
+        <a class="nav-link" data-nav-link href="#about">Character</a>
+        <a class="nav-link" data-nav-link href="#work">Main Quest</a>
+        <a class="nav-link" data-nav-link href="#process">Story</a>
+        <a class="nav-link" data-nav-link href="#contact">Replay</a>
+      </div>
+
+      <button class="grid size-11 place-items-center border border-white/15 bg-white/5 text-white md:hidden"
+        type="button" aria-label="Open navigation" aria-expanded="false" data-menu-toggle>
+        <span class="h-4 w-5 border-y border-current"></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu border-t border-white/10 bg-void/95 md:hidden" data-mobile-menu>
+      <div class="shell grid gap-5 py-6">
+        <a class="nav-link" data-nav-link href="#home">Start</a>
+        <a class="nav-link" data-nav-link href="#about">Character</a>
+        <a class="nav-link" data-nav-link href="#work">Main Quest</a>
+        <a class="nav-link" data-nav-link href="#process">Story</a>
+        <a class="nav-link" data-nav-link href="#contact">Replay</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero flex items-center pt-24">
+      <div class="shell grid min-h-[calc(100svh-6rem)] items-center gap-10 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:py-20">
+        <div class="relative z-10 min-w-0 max-w-2xl">
+          <p class="eyebrow reveal">2026 portfolio</p>
+          <img class="hero-logo reveal mt-6 w-full max-w-[320px] sm:max-w-[470px]"
+            src="assets/artwork/hero-logo-plaque.png" width="1024" height="603" alt="Portfolio" />
+          <h1 class="reveal mt-6 font-display text-[clamp(4rem,12vw,10rem)] leading-[0.78] text-white">
+            Ng Hang
+          </h1>
+          <p class="soft-copy reveal mt-7 w-full max-w-[19rem] text-lg sm:max-w-xl">
+            Game artist building expressive characters, playful worlds, cinematic UI, and story-rich images with a
+            handmade cosmic pulse.
+          </p>
+          <div class="reveal mt-10 flex flex-wrap gap-4">
+            <a class="plaque-button magnetic" href="#work">Play</a>
+            <a class="plaque-button magnetic" href="#about">Character</a>
+          </div>
+        </div>
+
+        <div class="relative min-h-[520px] lg:min-h-[760px]" aria-hidden="true">
+          <img class="hero-planet absolute -right-24 top-28 w-[55vw] max-w-[690px] opacity-70 md:right-0"
+            src="assets/artwork/hero-portrait.png" width="720" height="935" alt="" data-parallax="-0.35" />
+          <img class="hero-astronaut absolute left-1/2 top-8 w-[78vw] max-w-[700px] -translate-x-1/2 lg:left-[46%]"
+            src="assets/artwork/hero-orbit.png" width="1274" height="1235" alt="" />
+          <img class="absolute bottom-0 left-0 hidden w-40 rotate-[-10deg] opacity-90 drop-shadow-2xl sm:block"
+            src="assets/artwork/hero-side-art.png" width="284" height="327" alt="" />
+          <div
+            class="absolute bottom-8 right-0 hidden rounded-full border border-aura/25 bg-aura/10 px-5 py-3 text-xs font-bold uppercase tracking-[0.3em] text-white/80 shadow-aura lg:block">
+            Visual quest unlocked
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="star-divider"></div>
+
+    <section class="relative flex min-h-screen items-center justify-center overflow-hidden py-16 lg:py-24">
+      <div class="shell relative z-10 flex flex-col items-center">
+        <div class="reveal w-full max-w-[800px] text-center">
+          <p class="eyebrow">Quest menu</p>
+          <h2 class="section-title mt-4 text-[clamp(2.2rem,6vw,4.5rem)]">Choose the route</h2>
+          <p class="soft-copy mt-6 mx-auto max-w-xl text-center">
+            Start with the artist profile, enter the main artwork quest, then move through the story boards and final
+            character moments.
+          </p>
+          <div
+            class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 w-full max-w-[240px] sm:max-w-[560px] md:max-w-[640px] mx-auto">
+            <a class="plaque-button magnetic w-full" href="#about">Character</a>
+            <a class="plaque-button magnetic w-full" href="#work">Main Quest</a>
+            <a class="plaque-button magnetic w-full" href="#process">Side Quest</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-pad relative overflow-hidden">
+      <div class="shell grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
+        <div class="relative min-h-[620px] reveal">
+          <img class="absolute left-1/2 top-0 w-[78%] max-w-[540px] -translate-x-1/2 drop-shadow-2xl"
+            src="assets/artwork/about-character.png" width="1115" height="1411"
+            alt="Ng Hang astronaut character illustration" loading="lazy" decoding="async" />
+          <img class="absolute bottom-4 left-0 w-[58%] max-w-[360px] -rotate-6 shadow-plaque"
+            src="assets/artwork/about-card-art.png" width="1816" height="866"
+            alt="Blue game artwork card from the Figma portfolio" loading="lazy" decoding="async" />
+        </div>
+
+        <div class="relative px-6 py-10 sm:px-10 lg:px-14 lg:py-16 reveal">
+          <img class="panel-bg" src="assets/artwork/about-panel.png" width="1024" height="1536" alt="" loading="lazy" />
+          <div class="relative z-10">
+            <p class="eyebrow">About me</p>
+            <h2 class="mt-4 font-display text-[clamp(2.5rem,8vw,5.7rem)] leading-none text-white">Artist profile</h2>
+            <p class="soft-copy mt-6">
+              My love for games and design is what motivates me to pursue a career in Game Art. I aspire to combine
+              artistic thinking, visual creativity, and a passion for games to create visually rich and emotionally
+              engaging experiences for players.
+            </p>
+            <p class="soft-copy mt-4">
+              With a spirit of learning, initiative, and responsibility, I hope to contribute to building high-quality
+              game products that provide enjoyable and memorable experiences for players.
+            </p>
+
+            <div class="mt-9 grid gap-4 sm:grid-cols-3">
+              <div class="glass-panel p-4">
+                <p class="text-2xl font-display text-aura">01</p>
+                <p class="mt-2 text-sm font-semibold text-white">Character art</p>
+              </div>
+              <div class="glass-panel p-4">
+                <p class="text-2xl font-display text-star">02</p>
+                <p class="mt-2 text-sm font-semibold text-white">Game UI</p>
+              </div>
+              <div class="glass-panel p-4">
+                <p class="text-2xl font-display text-ember">03</p>
+                <p class="mt-2 text-sm font-semibold text-white">Story scenes</p>
+              </div>
+            </div>
+
+            <div class="mt-9">
+              <p class="eyebrow mb-4">Skill kit</p>
+              <div class="flex flex-wrap items-center gap-4">
+                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-figma.png" width="1024"
+                  height="1024" alt="Figma skill icon" loading="lazy" />
+                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-oip.png" width="474" height="474"
+                  alt="Digital art tool icon" loading="lazy" />
+                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-app.png" width="1448"
+                  height="1086" alt="Art application icon" loading="lazy" />
+                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-skill-01.png" width="1254"
+                  height="1254" alt="Game art skill badge" loading="lazy" />
+                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-skill-02.png" width="1254"
+                  height="1254" alt="Game art skill badge" loading="lazy" />
+                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-skill-03.png" width="1254"
+                  height="1254" alt="Game art skill badge" loading="lazy" />
+                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-skill-04.png" width="1254"
+                  height="1254" alt="Game art skill badge" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section-pad">
+      <div class="shell">
+        <div class="max-w-3xl reveal">
+          <p class="eyebrow">Main quest</p>
+          <h2 class="section-title mt-4">Featured worlds</h2>
+          <p class="soft-copy mt-6">
+            Large cinematic frames lead each project, with character sheets, environment studies, props, UI moments, and
+            story scenes gathered like discoveries along the path.
+          </p>
+        </div>
+      </div>
+
+      <article class="mt-12">
+        <div class="project-hero relative overflow-hidden">
+          <img class="absolute inset-0 h-full w-full object-cover" src="assets/artwork/feel-cover.png" width="1920"
+            height="1080" alt="FEEL game cover artwork" loading="lazy" decoding="async" />
+          <div class="shell relative z-10 flex min-h-[inherit] items-end pb-12">
+            <div class="max-w-3xl reveal">
+              <p class="eyebrow">Healing adventure game</p>
+              <h3 class="font-display text-[clamp(4rem,12vw,9rem)] leading-none text-white">FEEL</h3>
+              <p class="soft-copy mt-5 max-w-2xl">
+                Feel follows Lino, a lonely boy adrift in space who has lost all his emotions. With a magical
+                paintbrush, he enters his inner world and pieces together forgotten fragments of feeling.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="shell mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <figure class="project-card reveal md:col-span-2 lg:col-span-2" data-lightbox
+            data-caption="FEEL intro cutscene">
+            <img src="assets/artwork/feel-intro-cutscene.png" width="1920" height="1080"
+              alt="FEEL intro cutscene artwork" loading="lazy" decoding="async" />
+            <figcaption>Intro cutscene</figcaption>
+          </figure>
+          <figure class="project-card reveal" data-lightbox data-caption="Lino main character sheet">
+            <img src="assets/artwork/feel-main-character.png" width="1920" height="1080" alt="Lino main character sheet"
+              loading="lazy" decoding="async" />
+            <figcaption>Main character</figcaption>
+          </figure>
+          <figure class="project-card reveal" data-lightbox data-caption="Lino run animation sheet">
+            <img src="assets/artwork/feel-run-sheet.png" width="1920" height="1080" alt="Lino run animation sheet"
+              loading="lazy" decoding="async" />
+            <figcaption>Run animation</figcaption>
+          </figure>
+          <figure class="project-card reveal lg:col-span-2" data-lightbox data-caption="FEEL platform environment">
+            <img src="assets/artwork/feel-platform.png" width="4096" height="369" alt="FEEL platform environment strip"
+              loading="lazy" decoding="async" />
+            <figcaption>Platform environment</figcaption>
+          </figure>
+          <figure class="project-card reveal" data-lightbox data-caption="Emotion elements system">
+            <img src="assets/artwork/feel-elements-board.png" width="1920" height="1080"
+              alt="FEEL emotion element system board" loading="lazy" decoding="async" />
+            <figcaption>Element system</figcaption>
+          </figure>
+          <figure class="project-card reveal" data-lightbox data-caption="FEEL bosses">
+            <img src="assets/artwork/feel-bosses.png" width="1920" height="1080" alt="FEEL boss concept lineup"
+              loading="lazy" decoding="async" />
+            <figcaption>Boss concepts</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="shell mt-24 grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
+        <div class="reveal">
+          <p class="eyebrow">Boss design</p>
+          <h3 class="section-title mt-4 text-[clamp(2.6rem,7vw,5.4rem)]">Verdant Awaken</h3>
+          <p class="soft-copy mt-6">
+            A darker fantasy cluster built from layered boss silhouettes, root forms, and forest fragments, gathered
+            into a dense concept board with a sharp center of gravity.
+          </p>
+        </div>
+        <div class="grid grid-cols-6 gap-4">
+          <figure class="project-card tilt-card col-span-3 aspect-[1.18] reveal" data-tilt data-lightbox
+            data-caption="Verdant Awaken boss study 01">
+            <img src="assets/artwork/verdant-boss-01.png" width="634" height="534" alt="Verdant Awaken boss study"
+              loading="lazy" decoding="async" />
+          </figure>
+          <figure class="project-card tilt-card col-span-3 aspect-[1.18] reveal" data-tilt data-lightbox
+            data-caption="Verdant Awaken boss study 02">
+            <img src="assets/artwork/verdant-boss-02.png" width="634" height="534" alt="Verdant Awaken boss study"
+              loading="lazy" decoding="async" />
+          </figure>
+          <figure class="project-card tilt-card col-span-2 aspect-square reveal" data-tilt data-lightbox
+            data-caption="Verdant Awaken root back layer">
+            <img src="assets/artwork/verdant-root-back.png" width="1920" height="1080" alt="Root concept back layer"
+              loading="lazy" decoding="async" />
+          </figure>
+          <figure class="project-card tilt-card col-span-2 aspect-square reveal" data-tilt data-lightbox
+            data-caption="Verdant Awaken mood scene">
+            <img src="assets/artwork/verdant-mood.png" width="1920" height="1080" alt="Verdant Awaken mood scene"
+              loading="lazy" decoding="async" />
+          </figure>
+          <figure class="project-card tilt-card col-span-2 aspect-square reveal" data-tilt data-lightbox
+            data-caption="Verdant Awaken root front layer">
+            <img src="assets/artwork/verdant-root-front.png" width="1920" height="1080" alt="Root concept front layer"
+              loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </article>
+
+      <article class="mt-24">
+        <div class="project-hero relative overflow-hidden">
+          <img class="absolute inset-0 h-full w-full object-cover" src="assets/artwork/self-cover.png" width="1920"
+            height="1080" alt="SELF: Under the Smile title screen artwork" loading="lazy" decoding="async" />
+          <div class="shell relative z-10 flex min-h-[inherit] items-end pb-12">
+            <div class="max-w-3xl reveal">
+              <p class="eyebrow">Character and mood</p>
+              <h3 class="font-display text-[clamp(2.8rem,8vw,6rem)] leading-none text-white">SELF: Under the Smile</h3>
+              <p class="soft-copy mt-5 max-w-2xl">
+                A theatrical project with soft horror, hand-drawn stars, paper props, and a playful mask language. Slow
+                pacing lets the unsettling charm sit on screen a little longer.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="shell mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <figure class="project-card reveal" data-lightbox data-caption="SELF character variation">
+            <img src="assets/artwork/self-clown-a.png" width="415" height="595" alt="SELF clown character concept"
+              loading="lazy" decoding="async" />
+            <figcaption>Character A</figcaption>
+          </figure>
+          <figure class="project-card reveal" data-lightbox data-caption="SELF character variation">
+            <img src="assets/artwork/self-clown-b.png" width="427" height="648" alt="SELF clown character concept"
+              loading="lazy" decoding="async" />
+            <figcaption>Character B</figcaption>
+          </figure>
+          <figure class="project-card reveal lg:col-span-2" data-lightbox data-caption="SELF story panel 01">
+            <img src="assets/artwork/self-panel-01.png" width="945" height="945" alt="SELF square story panel artwork"
+              loading="lazy" decoding="async" />
+            <figcaption>Panel study</figcaption>
+          </figure>
+          <figure class="project-card reveal lg:col-span-2" data-lightbox data-caption="SELF story panel 02">
+            <img src="assets/artwork/self-panel-02.png" width="945" height="945" alt="SELF square story panel artwork"
+              loading="lazy" decoding="async" />
+            <figcaption>Panel study</figcaption>
+          </figure>
+          <figure class="project-card reveal lg:col-span-2" data-lightbox data-caption="FEEL app icon">
+            <img src="assets/artwork/feel-app-icon.png" width="1024" height="1024" alt="FEEL app icon illustration"
+              loading="lazy" decoding="async" />
+            <figcaption>App icon</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <section id="process" class="section-pad relative overflow-hidden">
+      <div class="shell">
+        <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div class="reveal">
+            <p class="eyebrow">Side quest</p>
+            <h2 class="section-title mt-4">Storytelling</h2>
+          </div>
+          <p class="soft-copy reveal max-w-xl lg:justify-self-end">
+            The final stretch slows down into storyboard rhythm: wide shots, chapter moments, and a last playable
+            feeling of "again?".
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5">
+          <figure class="project-card masked-reveal" data-lightbox data-caption="Storytelling cover scene">
+            <img src="assets/artwork/story-cover.png" width="1920" height="1080" alt="Storytelling cover scene"
+              loading="lazy" decoding="async" />
+            <figcaption>Chapter cover</figcaption>
+          </figure>
+          <div class="grid gap-5 md:grid-cols-3">
+            <figure class="project-card reveal" data-lightbox data-caption="Chapter study 01">
+              <img src="assets/artwork/story-chapter-01.png" width="1920" height="1080" alt="Storytelling chapter study"
+                loading="lazy" decoding="async" />
+              <figcaption>Chapter 01</figcaption>
+            </figure>
+            <figure class="project-card reveal" data-lightbox data-caption="Chapter study 02">
+              <img src="assets/artwork/story-chapter-02.png" width="1920" height="1080" alt="Storytelling chapter study"
+                loading="lazy" decoding="async" />
+              <figcaption>Chapter 02</figcaption>
+            </figure>
+            <figure class="project-card reveal" data-lightbox data-caption="Chapter study 03">
+              <img src="assets/artwork/story-chapter-03.png" width="980" height="931" alt="Storytelling chapter study"
+                loading="lazy" decoding="async" />
+              <figcaption>Chapter 03</figcaption>
+            </figure>
+          </div>
+          <div class="grid gap-5 lg:grid-cols-2">
+            <figure class="project-card masked-reveal" data-lightbox data-caption="Wide storytelling scene">
+              <img src="assets/artwork/story-wide-01.png" width="1920" height="1080" alt="Wide storytelling scene"
+                loading="lazy" decoding="async" />
+              <figcaption>Wide scene</figcaption>
+            </figure>
+            <figure class="project-card masked-reveal" data-lightbox data-caption="Final storytelling image">
+              <img src="assets/artwork/story-wide-02.png" width="1920" height="1080" alt="Final storytelling scene"
+                loading="lazy" decoding="async" />
+              <figcaption>Final frame</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-pad relative overflow-hidden">
+      <div class="shell grid items-center gap-10 lg:grid-cols-[1fr_0.9fr]">
+        <div class="relative reveal">
+          <img class="mx-auto w-full max-w-[560px] drop-shadow-2xl" src="assets/artwork/closing-portrait.png"
+            width="739" height="699" alt="Ng Hang illustrated closing portrait" loading="lazy" decoding="async" />
+          <img class="absolute -left-6 bottom-0 hidden w-32 rotate-[-18deg] sm:block"
+            src="assets/artwork/closing-orb-left.png" width="437" height="435" alt="" loading="lazy" />
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">Play again?</p>
+          <h2 class="section-title mt-4">Thank you</h2>
+          <p class="soft-copy mt-6 max-w-xl">
+            Soft cosmic energy, character charm, and story-first pacing carry the final screen back toward the
+            beginning.
+          </p>
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a class="plaque-button magnetic" href="#home">Play again</a>
+            <a class="plaque-button magnetic" href="#work">View work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 py-8">
+    <div
+      class="shell flex flex-col gap-3 text-xs uppercase tracking-[0.24em] text-white/50 sm:flex-row sm:items-center sm:justify-between">
+      <p>Ng Hang Portfolio</p>
+      <p>Game Art / Character / Story</p>
+    </div>
+  </footer>
+
+  <div class="lightbox" data-lightbox-modal role="dialog" aria-modal="true" aria-hidden="true"
+    aria-label="Artwork preview">
+    <div class="lightbox__dialog">
+      <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close preview">x</button>
+      <img class="lightbox__image" data-lightbox-image alt="" />
+      <p class="px-4 py-4 text-sm font-semibold text-white/78" data-lightbox-caption></p>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

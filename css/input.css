@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen overflow-x-hidden bg-void font-sans text-white antialiased;
+  }
+
+  ::selection {
+    background: rgba(96, 173, 255, 0.35);
+    color: #ffffff;
+  }
+
+  img {
+    user-select: none;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-[1180px] px-5 sm:px-7 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.32em] text-aura/90;
+  }
+
+  .section-title {
+    @apply font-display text-[clamp(2.6rem,7vw,6.5rem)] leading-[0.88] text-white;
+    text-shadow: 0 -8px 28px rgba(96, 173, 255, 0.3), 0 9px 18px rgba(255, 255, 255, 0.14);
+  }
+
+  .soft-copy {
+    @apply text-sm leading-7 text-white/70 md:text-base md:leading-8;
+  }
+
+  .glass-panel {
+    @apply border border-white/10 bg-[#070735]/70 shadow-plaque backdrop-blur-md;
+  }
+
+  .art-frame {
+    @apply relative overflow-hidden border border-white/10 bg-[#050527] shadow-aura;
+  }
+
+  .nav-link {
+    @apply relative text-xs font-semibold uppercase tracking-[0.22em] text-white/60 transition duration-300 ease-cinematic hover:text-white;
+  }
+
+  .nav-link::after {
+    @apply absolute -bottom-2 left-0 h-px w-0 bg-aura transition-all duration-300 ease-cinematic content-[''];
+  }
+
+  .nav-link:hover::after,
+  .nav-link.is-active::after {
+    @apply w-full;
+  }
+
+  .nav-link.is-active {
+    @apply text-white;
+  }
+
+  .plaque-button {
+    @apply relative inline-flex min-h-12 items-center justify-center overflow-visible bg-transparent px-8 py-3 font-display text-lg uppercase text-white transition duration-300 ease-cinematic focus:outline-none focus-visible:ring-2 focus-visible:ring-aura focus-visible:ring-offset-2 focus-visible:ring-offset-void;
+    background-color: transparent;
+    background-image: url("../assets/artwork/hero-button-plaque.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  }
+
+  .plaque-button:hover {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 0 20px rgba(96, 173, 255, 0.45));
+  }
+
+  .project-card {
+    @apply art-frame block focus:outline-none focus-visible:ring-2 focus-visible:ring-aura;
+  }
+
+  .project-card img {
+    @apply h-full w-full object-cover transition duration-700 ease-cinematic;
+  }
+
+  .project-card:hover img,
+  .project-card:focus-visible img {
+    transform: scale(1.045);
+  }
+
+  .project-card figcaption {
+    @apply pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 text-sm font-semibold text-white;
+  }
+}
