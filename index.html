@@ -113,11 +113,22 @@
             Start with the artist profile, enter the main artwork quest, then move through the story boards and final
             character moments.
           </p>
-          <div
-            class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 w-full max-w-[240px] sm:max-w-[560px] md:max-w-[640px] mx-auto">
-            <a class="plaque-button magnetic w-full" href="#about">Character</a>
-            <a class="plaque-button magnetic w-full" href="#work">Main Quest</a>
-            <a class="plaque-button magnetic w-full" href="#process">Side Quest</a>
+
+          <div class="relative mx-auto mt-12 w-full max-w-[420px]">
+            <img class="absolute left-1/2 top-1/2 -z-10 w-[160%] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-80 mix-blend-screen"
+              src="assets/artwork/galaxy-space.png" width="800" height="200" alt="" loading="lazy" decoding="async" />
+            <div class="relative">
+              <img class="w-full" src="assets/artwork/menu-board.png" width="479" height="479"
+                alt="" loading="lazy" decoding="async" />
+              <div class="absolute inset-0 flex flex-col items-center px-9 py-9 sm:px-12 sm:py-11">
+                <h3 class="font-display text-2xl uppercase tracking-wide text-white sm:text-3xl">Menu</h3>
+                <div class="mt-6 flex w-full flex-1 flex-col items-center justify-center gap-5">
+                  <a class="plaque-button magnetic w-full" href="#about">Character</a>
+                  <a class="plaque-button magnetic w-full" href="#work">Main Quest</a>
+                  <a class="plaque-button magnetic w-full" href="#process">Side Quest</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -126,12 +137,15 @@
     <section id="about" class="section-pad relative overflow-hidden">
       <div class="shell grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
         <div class="relative min-h-[620px] reveal">
-          <img class="absolute left-1/2 top-0 w-[78%] max-w-[540px] -translate-x-1/2 drop-shadow-2xl"
-            src="assets/artwork/about-character.png" width="1115" height="1411"
-            alt="Ng Hang astronaut character illustration" loading="lazy" decoding="async" />
-          <img class="absolute bottom-4 left-0 w-[58%] max-w-[360px] -rotate-6 shadow-plaque"
+          <!-- <img class="absolute bottom-6 left-1/2 z-0 w-[60%] max-w-[380px] -translate-x-1/2 shadow-plaque"
             src="assets/artwork/about-card-art.png" width="1816" height="866"
             alt="Blue game artwork card from the Figma portfolio" loading="lazy" decoding="async" />
+          <img class="absolute left-1/2 top-0 z-10 w-[78%] max-w-[540px] -translate-x-1/2 drop-shadow-2xl"
+            src="assets/artwork/about-character.png" width="1115" height="1411"
+            alt="Ng Hang astronaut character illustration" loading="lazy" decoding="async" /> -->
+          <img class="absolute left-1/2 top-0 w-[78%] max-w-[420px] -translate-x-1/2 drop-shadow-2xl"
+            src="assets/artwork/base-stand-character.png" width="796" height="1109"
+            alt="Ng Hang astronaut character standing on a display base" loading="lazy" decoding="async" />
         </div>
 
         <div class="relative px-6 py-10 sm:px-10 lg:px-14 lg:py-16 reveal">
