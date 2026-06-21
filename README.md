@@ -12,7 +12,7 @@ The site extends the Figma identity into a live web experience: midnight constel
 - Tailwind CSS
 - Custom CSS
 - Vanilla JavaScript modules
-- Vite for local serving and production build
+- Python's built-in `http.server` for local static serving
 - Playwright Core for local Edge-based visual/smoke checks
 
 ## Commands
