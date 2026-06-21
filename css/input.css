@@ -30,6 +30,10 @@
     @apply mx-auto w-full max-w-[1180px] px-5 sm:px-7 lg:px-10;
   }
 
+  .shell-wide {
+    @apply mx-auto w-full max-w-[1600px] px-5 sm:px-7 lg:px-10;
+  }
+
   .eyebrow {
     @apply text-xs font-semibold uppercase tracking-[0.32em] text-aura/90;
   }

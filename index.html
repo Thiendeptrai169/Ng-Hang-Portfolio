@@ -5,445 +5,236 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Ng Hang game artist portfolio featuring character art, cinematic game scenes, UI concepts, and storytelling artwork." />
-  <title>Ng Hang | Game Artist Portfolio</title>
+    content="Ng Hang game artist portfolio — character art, cinematic game scenes, UI concepts and storytelling artwork." />
+  <title>Ng Hang | Portfolio</title>
   <link rel="icon"
     href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="%2301011e"/><text x="32" y="41" font-size="28" text-anchor="middle" fill="white" font-family="Arial" font-weight="700">N</text></svg>' />
-  <link rel="preload" href="assets/artwork/constellations-bg.png" as="image" />
-  <link rel="preload" href="assets/artwork/hero-orbit.png" as="image" />
-  <link rel="stylesheet" href="css/output.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Braah+One&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="css/custom.css" />
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to portfolio</a>
+  <div class="viewport">
+    <div class="stage">
+      <div class="bg-stars"></div>
 
-  <div class="loader" data-loader aria-hidden="true">
-    <div class="loader__mark">
-      <p class="eyebrow mb-5">Loading portfolio</p>
-      <img class="hero-logo mx-auto mb-8 w-full max-w-[360px]" src="assets/artwork/hero-logo-plaque.png" width="1024"
-        height="603" alt="" />
-      <div class="loader__bar"><span></span></div>
+      <!-- ============================== HERO (y0–1230) ============================== -->
+      <!-- glow behind astronaut -->
+      <div class="glow-blob" style="left:-67px;top:256px;width:853px;height:891px;background:radial-gradient(circle,rgba(96,173,255,0.28),transparent 70%)"></div>
+
+      <!-- astronaut girl (106:375) -->
+      <img class="n fit-contain" style="left:0;top:88px;width:944px;height:916px;z-index:2" src="assets/artwork/hero-orbit.png" alt="Astronaut character floating in space" />
+      <!-- earth planet (106:252) -->
+      <img class="n fit-contain" style="left:716px;top:596px;width:720px;height:935px" src="assets/artwork/hero-portrait.png" alt="" />
+      <!-- pink planet (106:290) -->
+      <img class="n fit-contain" style="left:-53px;top:840px;width:284px;height:327px" src="assets/artwork/hero-side-art.png" alt="" />
+      <!-- PORTFOLIO logo (106:289) -->
+      <img class="n fit-contain" style="left:733px;top:205px;width:553px;height:129px;z-index:3" src="assets/artwork/hero-logo-plaque.png" alt="Portfolio" />
+      <!-- 2026 (106:297) -->
+      <p class="t font-pop" style="left:1211px;top:323px;width:56px;font-size:24px">2026</p>
+      <!-- PLAY button (106:291 + 106:294) -->
+      <img class="n fit-fill" style="left:840px;top:373px;width:340px;height:127px;z-index:2" src="assets/artwork/hero-button-plaque.png" alt="" />
+      <p class="t font-braah glow-dark center" style="left:840px;top:411px;width:340px;font-size:40px;z-index:3">PLAY</p>
+
+      <!-- ============================== MENU (y1229–1870) ============================== -->
+      <img class="n fit-contain" style="left:370px;top:1875px;width:699px;height:58px;opacity:.8;mix-blend-mode:screen" src="assets/artwork/galaxy-space.png" alt="" />
+      <!-- menu board (106:296) -->
+      <img class="n fit-contain" style="left:396px;top:1229px;width:639px;height:639px" src="assets/artwork/menu-board.png" alt="" />
+      <p class="t font-braah glow-white center" style="left:649px;top:1292px;width:141px;font-size:50px;z-index:3">MENU</p>
+      <!-- 3 menu buttons (106:307/308/309) + labels (106:310/311/312) -->
+      <img class="n fit-fill" style="left:550px;top:1384px;width:340px;height:127px;z-index:2" src="assets/artwork/hero-button-plaque.png" alt="" />
+      <p class="t font-braah glow-dark center" style="left:550px;top:1428px;width:340px;font-size:26px;z-index:3">Character</p>
+      <img class="n fit-fill" style="left:550px;top:1521px;width:340px;height:127px;z-index:2" src="assets/artwork/hero-button-plaque.png" alt="" />
+      <p class="t font-braah glow-dark center" style="left:550px;top:1565px;width:340px;font-size:26px;z-index:3">Main Quest</p>
+      <img class="n fit-fill" style="left:550px;top:1658px;width:340px;height:127px;z-index:2" src="assets/artwork/hero-button-plaque.png" alt="" />
+      <p class="t font-braah glow-dark center" style="left:550px;top:1702px;width:340px;font-size:26px;z-index:3">Side Quest</p>
+
+      <!-- ============================== CHARACTER / ABOUT (y2103–3580) ============================== -->
+      <div class="glow-blob" style="left:47px;top:2531px;width:625px;height:700px;background:radial-gradient(circle,rgba(150,90,255,0.22),transparent 70%)"></div>
+      <!-- title banner + CHARACTER heading (106:292 + 106:299) -->
+      <img class="n fit-fill" style="left:489px;top:2103px;width:462px;height:189px;z-index:1" src="assets/artwork/hero-button-plaque.png" alt="" />
+      <p class="t font-pop glow-dark center" style="left:576px;top:2160px;width:317px;font-size:50px;z-index:3">CHARACTER</p>
+
+      <!-- avatar + Ng Hang (106:325 + 106:282) -->
+      <div class="n avatar-round" style="left:144px;top:2132px;width:115px;height:115px;z-index:3">
+        <img src="assets/artwork/profile-avatar.png" style="width:100%;height:100%" alt="Ng Hang avatar" />
+      </div>
+      <p class="t font-pop" style="left:234px;top:2375px;width:200px;font-size:40px;z-index:3">Ng Hang</p>
+
+      <!-- left standing character on base (106:258) -->
+      <img class="n fit-contain" style="left:-42px;top:2400px;width:788px;height:934px;z-index:2" src="assets/artwork/base-stand-character.png" alt="Astronaut character standing on a base" />
+      <!-- small card art (106:238) -->
+      <img class="n fit-cover" style="left:47px;top:3214px;width:577px;height:275px;border-radius:12px;z-index:2" src="assets/artwork/about-card-art.png" alt="" />
+
+      <!-- big character art behind about panel (106:329) -->
+      <img class="n fit-contain" style="left:432px;top:2175px;width:1114px;height:1412px;z-index:2" src="assets/artwork/about-character.png" alt="Ng Hang character illustration" />
+      <!-- about panel (106:320) -->
+      <img class="n fit-fill" style="left:651px;top:2442px;width:674px;height:1010px;z-index:3" src="assets/artwork/about-panel.png" alt="" />
+      <!-- about texts -->
+      <p class="t font-pop glow-dark" style="left:731px;top:2525px;width:200px;font-size:24px;z-index:4">ABOUT ME</p>
+      <p class="t font-body justify" style="left:735px;top:2572px;width:509px;font-size:14px;z-index:4;color:rgba(255,255,255,.92)">
+        My love for games and design is what motivates me to pursue a career in Game Art. I aspire to combine artistic
+        thinking, visual creativity, and a passion for games to create visually rich and emotionally engaging
+        experiences for players. With a spirit of learning, initiative, and responsibility, I hope to contribute to
+        building high-quality game products that provide enjoyable and memorable experiences for players.
+      </p>
+      <p class="t font-pop glow-dark" style="left:731px;top:2726px;width:200px;font-size:24px;z-index:4">SKILL</p>
+
+      <!-- skill icons (106:367/368/369 + group 106:370) -->
+      <div class="n skill-chip" style="left:850px;top:2782px;width:66px;height:66px;z-index:4"><img src="assets/artwork/tool-oip.png" style="width:100%;height:100%" alt="tool" /></div>
+      <div class="n skill-chip" style="left:944px;top:2782px;width:69px;height:66px;z-index:4"><img src="assets/artwork/tool-app.png" style="width:100%;height:100%" alt="tool" /></div>
+      <div class="n skill-chip" style="left:1045px;top:2782px;width:66px;height:66px;z-index:4"><img src="assets/artwork/tool-figma.png" style="width:100%;height:100%" alt="Figma" /></div>
+      <div class="n skill-chip" style="left:821px;top:2870px;width:58px;height:58px;z-index:4"><img src="assets/artwork/tool-skill-01.png" style="width:100%;height:100%" alt="skill" /></div>
+      <div class="n skill-chip" style="left:907px;top:2870px;width:58px;height:58px;z-index:4"><img src="assets/artwork/tool-skill-02.png" style="width:100%;height:100%" alt="skill" /></div>
+      <div class="n skill-chip" style="left:993px;top:2871px;width:57px;height:57px;z-index:4"><img src="assets/artwork/tool-skill-03.png" style="width:100%;height:100%" alt="skill" /></div>
+      <div class="n skill-chip" style="left:1078px;top:2870px;width:58px;height:58px;z-index:4"><img src="assets/artwork/tool-skill-04.png" style="width:100%;height:100%" alt="skill" /></div>
+
+      <!-- second ABOUT ME label (106:323) -->
+      <p class="t font-pop glow-dark" style="left:731px;top:2982px;width:200px;font-size:24px;z-index:4">ABOUT ME</p>
+
+      <!-- subscribe widget (106:301) -->
+      <div class="n" style="left:1088px;top:2137px;width:282px;height:94px;z-index:4;background:rgba(8,8,51,.85);border:1px solid rgba(255,255,255,.12);border-radius:14px;display:flex;align-items:center;gap:10px;padding:0 14px">
+        <img src="assets/artwork/profile-avatar.png" style="width:60px;height:60px;border-radius:50%;object-fit:cover" alt="" />
+        <span style="font-family:Poppins;font-weight:600;font-size:13px;color:#fff">+ Thêm tiêu đề phụ</span>
+      </div>
+
+      <!-- ============================== MAIN QUEST (y3624–3813) ============================== -->
+      <img class="n fit-fill" style="left:489px;top:3624px;width:462px;height:189px;z-index:1" src="assets/artwork/hero-button-plaque.png" alt="" />
+      <p class="t font-pop glow-dark center" style="left:576px;top:3681px;width:317px;font-size:50px;z-index:3">MAIN QUEST</p>
+
+      <!-- ============================== FEEL (y4104–11200) ============================== -->
+      <!-- FEEL banner cover (106:339) -->
+      <img class="n fit-cover" style="left:-2px;top:4229px;width:1442px;height:811px" src="assets/artwork/feel-cover.png" alt="FEEL game cover" />
+      <!-- FEEL title plaque + word (106:376 + 106:377) -->
+      <img class="n fit-fill" style="left:478px;top:3967px;width:514px;height:225px;z-index:2" src="assets/artwork/hero-button-plaque.png" alt="" />
+      <p class="t font-pop glow-white center" style="left:478px;top:4008px;width:514px;font-size:96px;z-index:3">FEEL</p>
+
+      <!-- FEEL description (106:330) -->
+      <p class="t font-body justify center" style="left:228px;top:5132px;width:982px;font-size:14px;z-index:2;color:rgba(255,255,255,.92)">
+        Feel is a healing adventure game about Lino, a lonely boy adrift in the cold vastness of space who has lost all
+        his emotions. With the help of a magical paintbrush, Lino embarks on a journey into his inner world, piecing
+        together forgotten fragments of his feelings. Players don't just accompany Lino to "win," but experience a path
+        of healing — ultimately rediscovering themselves along the way.
+      </p>
+
+      <!-- INTRO CUTSCREEN (106:331 + 106:340) -->
+      <p class="t font-pop glow-white center" style="left:488px;top:5525px;width:465px;font-size:50px;z-index:3">INTRO CUTSCREEN</p>
+      <img class="n fit-cover" style="left:0;top:5618px;width:1448px;height:815px" src="assets/artwork/feel-intro-cutscene.png" alt="FEEL intro cutscene" />
+
+      <!-- MAIN CHARACTER (106:332) + sprites -->
+      <p class="t font-pop glow-white center" style="left:487px;top:6515px;width:465px;font-size:50px;z-index:3">MAIN CHARACTER</p>
+      <div class="glow-blob" style="left:198px;top:6620px;width:243px;height:140px;background:radial-gradient(circle,rgba(96,173,255,0.3),transparent 70%)"></div>
+      <p class="t font-pop glow-dark center" style="left:273px;top:6688px;width:93px;font-size:40px;z-index:3">LINO</p>
+      <img class="n fit-contain" style="left:81px;top:6775px;width:542px;height:524px;z-index:2" src="assets/artwork/feel-main-character.png" alt="Lino main character" />
+      <p class="t font-pop glow-dark" style="left:635px;top:6705px;width:120px;font-size:32px;z-index:3">Idle</p>
+      <img class="n fit-contain" style="left:703px;top:6700px;width:639px;height:238px;z-index:2" src="assets/artwork/feel-idle-sheet.png" alt="Lino idle animation" />
+      <p class="t font-pop glow-dark" style="left:635px;top:7018px;width:120px;font-size:32px;z-index:3">Run</p>
+      <img class="n fit-contain" style="left:696px;top:6982px;width:662px;height:317px;z-index:2" src="assets/artwork/feel-run-sheet.png" alt="Lino run animation" />
+
+      <!-- ENVIRONMENTS / PLATFORM (106:333 + 106:354 + 106:345) -->
+      <p class="t font-pop glow-white center" style="left:541px;top:7411px;width:357px;font-size:50px;z-index:3">ENVIRONMENTS</p>
+      <p class="t font-pop glow-dark" style="left:641px;top:7562px;width:165px;font-size:28px;z-index:3">PLATFORM</p>
+      <img class="n fit-cover" style="left:2px;top:7639px;width:1443px;height:130px" src="assets/artwork/feel-platform.png" alt="FEEL platform environment" />
+
+      <!-- ITEMS / Emotion Elements System (106:334 + 106:350 + 106:355 + 106:356) -->
+      <p class="t font-pop glow-white center" style="left:652px;top:7852px;width:137px;font-size:50px;z-index:3">ITEMS</p>
+      <p class="t font-pop glow-dark center" style="left:518px;top:7985px;width:412px;font-size:32px;z-index:3">Emotion Elements System</p>
+      <img class="n fit-contain" style="left:200px;top:8091px;width:1041px;height:263px;z-index:2" src="assets/artwork/feel-items.png" alt="FEEL items" />
+      <img class="n fit-contain" style="left:159px;top:8354px;width:1122px;height:716px;z-index:2" src="assets/artwork/feel-elements-board.png" alt="FEEL emotion elements board" />
+
+      <!-- BOSS (106:335 + 106:357) -->
+      <p class="t font-pop glow-white center" style="left:660px;top:9189px;width:120px;font-size:50px;z-index:3">BOSS</p>
+      <img class="n fit-contain" style="left:139px;top:9306px;width:1163px;height:360px;z-index:2" src="assets/artwork/feel-bosses.png" alt="FEEL boss lineup" />
+
+      <!-- ELEMENT grid (106:336 + 106:358 children) -->
+      <p class="t font-pop glow-white center" style="left:618px;top:9718px;width:204px;font-size:50px;z-index:3">ELEMENT</p>
+      <img class="n fit-contain" style="left:249px;top:9871px;width:437px;height:167px;z-index:2" src="assets/artwork/feel-bomb-icons.png" alt="" />
+      <img class="n fit-contain" style="left:748px;top:9837px;width:444px;height:250px;z-index:2" src="assets/artwork/feel-ice-star.png" alt="" />
+      <img class="n fit-contain" style="left:254px;top:10059px;width:448px;height:233px;z-index:2" src="assets/artwork/feel-elements-strip.png" alt="" />
+      <img class="n fit-contain" style="left:799px;top:10106px;width:139px;height:140px;z-index:3" src="assets/artwork/feel-obstacle.png" alt="" />
+      <img class="n fit-contain" style="left:998px;top:10103px;width:131px;height:143px;z-index:3" src="assets/artwork/feel-water-star.png" alt="" />
+      <img class="n fit-contain" style="left:254px;top:10306px;width:432px;height:227px;z-index:2" src="assets/artwork/feel-power-card.png" alt="" />
+      <img class="n fit-contain" style="left:754px;top:10290px;width:432px;height:243px;z-index:2" src="assets/artwork/feel-power-merge.png" alt="" />
+
+      <!-- APP ICON (106:337 + 106:366) -->
+      <p class="t font-pop glow-white center" style="left:613px;top:10636px;width:215px;font-size:50px;z-index:3">APP ICON</p>
+      <img class="n fit-contain" style="left:552px;top:10755px;width:342px;height:342px;z-index:2;border-radius:48px" src="assets/artwork/feel-app-icon.png" alt="FEEL app icon" />
+
+      <!-- TRAILER (106:338) -->
+      <p class="t font-pop glow-white center" style="left:629px;top:11178px;width:183px;font-size:50px;z-index:3">TRAILER</p>
+
+      <!-- ============================== TRAILER section (y12638) ============================== -->
+      <p class="t font-pop glow-white center" style="left:591px;top:12638px;width:259px;font-size:64px;z-index:3">TRAILER</p>
+
+      <!-- Verdant Awaken band (106:259) — recreated gray panel -->
+      <div class="n verdant-band" style="left:0;top:12767px;width:1445px;height:813px;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px">
+        <span class="verdant-title" style="font-size:72px;letter-spacing:.02em">Verdant Awaken</span>
+        <span class="verdant-btn" style="width:210px;height:64px;font-size:30px">Bắt đầu</span>
+      </div>
+
+      <!-- ============================== CHARACTER (Verdant) (y13686) ============================== -->
+      <p class="t font-pop glow-white center" style="left:530px;top:13686px;width:379px;font-size:64px;z-index:3">CHARACTER</p>
+      <img class="n fit-contain" style="left:187px;top:13865px;width:315px;height:265px;z-index:2" src="assets/artwork/verdant-boss-01.png" alt="" />
+      <img class="n fit-contain" style="left:532px;top:13865px;width:314px;height:265px;z-index:2" src="assets/artwork/verdant-boss-02.png" alt="" />
+      <img class="n fit-contain" style="left:947px;top:13864px;width:306px;height:268px;z-index:2" src="assets/artwork/verdant-boss-03.png" alt="" />
+      <img class="n fit-contain" style="left:187px;top:14216px;width:310px;height:282px;z-index:2" src="assets/artwork/verdant-boss-tail.png" alt="" />
+      <img class="n fit-contain" style="left:558px;top:14242px;width:327px;height:256px;z-index:2" src="assets/artwork/verdant-boss-04.png" alt="" />
+      <img class="n fit-contain" style="left:947px;top:14236px;width:306px;height:262px;z-index:2" src="assets/artwork/verdant-mood.png" alt="" />
+      <img class="n fit-contain" style="left:802px;top:14541px;width:381px;height:427px;z-index:2" src="assets/artwork/verdant-root-back.png" alt="" />
+      <img class="n fit-contain" style="left:258px;top:14644px;width:465px;height:324px;z-index:3" src="assets/artwork/verdant-root-front.png" alt="" />
+
+      <!-- ============================== SELF: UNDER THE SMILE (y15059–17754) ============================== -->
+      <img class="n fit-cover" style="left:0;top:15361px;width:1480px;height:832px" src="assets/artwork/self-cover.png" alt="SELF: Under the Smile cover" />
+      <img class="n fit-fill" style="left:425px;top:15059px;width:592px;height:259px;z-index:2" src="assets/artwork/hero-button-plaque.png" alt="" />
+      <p class="t font-pop glow-white center" style="left:425px;top:15159px;width:592px;font-size:40px;z-index:3">SELF: UNDER THE SMILE</p>
+
+      <p class="t font-pop glow-white center" style="left:530px;top:16320px;width:379px;font-size:64px;z-index:3">CHARACTER</p>
+      <img class="n fit-contain" style="left:252px;top:16433px;width:427px;height:648px;z-index:2" src="assets/artwork/self-clown-b.png" alt="SELF clown character" />
+      <img class="n fit-contain" style="left:772px;top:16459px;width:415px;height:595px;z-index:2" src="assets/artwork/self-clown-a.png" alt="SELF clown character" />
+      <img class="n fit-cover" style="left:90px;top:17081px;width:673px;height:673px;z-index:2;border-radius:8px" src="assets/artwork/self-panel-01.png" alt="SELF story panel" />
+      <img class="n fit-cover" style="left:676px;top:17081px;width:673px;height:673px;z-index:2;border-radius:8px" src="assets/artwork/self-panel-02.png" alt="SELF story panel" />
+
+      <!-- ============================== STORYTELLING (y17781–20229) ============================== -->
+      <p class="t font-pop glow-white center" style="left:492px;top:17781px;width:457px;font-size:64px;z-index:3">STORYTELLING</p>
+      <img class="n fit-cover" style="left:756px;top:17913px;width:628px;height:357px;z-index:2;border-radius:8px" src="assets/artwork/story-chapter-01.png" alt="Storytelling chapter" />
+      <img class="n fit-cover" style="left:152px;top:18316px;width:1136px;height:639px;z-index:2;border-radius:8px" src="assets/artwork/story-cover.png" alt="Storytelling scene" />
+      <img class="n fit-cover" style="left:0;top:19001px;width:1440px;height:810px" src="assets/artwork/story-wide-01.png" alt="Wide storytelling scene" />
+
+      <p class="t font-pop glow-white center" style="left:649px;top:19483px;width:199px;font-size:36px;z-index:3">PLAY AGAIN?</p>
+      <img class="n fit-cover" style="left:70px;top:19849px;width:408px;height:380px;z-index:2;border-radius:8px" src="assets/artwork/story-chapter-02.png" alt="Storytelling chapter" />
+      <img class="n fit-cover" style="left:524px;top:19849px;width:400px;height:380px;z-index:2;border-radius:8px" src="assets/artwork/story-chapter-03.png" alt="Storytelling chapter" />
+      <img class="n fit-cover" style="left:986px;top:19849px;width:400px;height:380px;z-index:2;border-radius:8px" src="assets/artwork/story-finale.png" alt="Storytelling finale" />
+      <img class="n fit-cover" style="left:0;top:20327px;width:1426px;height:802px" src="assets/artwork/story-wide-02.png" alt="Final storytelling scene" />
+
+      <!-- ============================== THANK YOU (y21194–22094) ============================== -->
+      <img class="n fit-contain" style="left:1074px;top:21194px;width:314px;height:313px;z-index:2" src="assets/artwork/closing-orb-left.png" alt="" />
+      <img class="n fit-contain" style="left:63px;top:21322px;width:257px;height:255px;z-index:2" src="assets/artwork/closing-orb-left.png" alt="" />
+      <img class="n fit-contain" style="left:422px;top:21287px;width:619px;height:586px;z-index:2" src="assets/artwork/closing-portrait.png" alt="Ng Hang closing portrait" />
+      <p class="t font-pop glow-dark center" style="left:633px;top:21750px;width:200px;font-size:28px;z-index:3">PLAY AGAIN?</p>
+      <img class="n fit-fill" style="left:355px;top:21775px;width:729px;height:319px;z-index:2" src="assets/artwork/hero-button-plaque.png" alt="" />
+      <p class="t font-pop glow-white center" style="left:518px;top:21893px;width:404px;font-size:60px;z-index:3">THANK YOU!</p>
     </div>
   </div>
 
-  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
-  <div class="cursor" data-cursor aria-hidden="true"></div>
-
-  <header class="site-header fixed inset-x-0 top-0 z-50 border-b border-white/0" data-header>
-    <nav class="shell flex min-h-20 items-center justify-between gap-6" aria-label="Primary navigation">
-      <a class="group flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-aura"
-        href="#home">
-        <span
-          class="grid size-9 place-items-center border border-aura/40 bg-aura/10 font-display text-lg text-white shadow-aura">N</span>
-        <span>
-          <span class="block text-sm font-bold uppercase tracking-[0.22em] text-white">Ng Hang</span>
-          <span class="block text-[0.65rem] uppercase tracking-[0.28em] text-aura/80">Game Artist</span>
-        </span>
-      </a>
-
-      <div class="hidden items-center gap-8 md:flex">
-        <a class="nav-link is-active" data-nav-link href="#home">Start</a>
-        <a class="nav-link" data-nav-link href="#about">Character</a>
-        <a class="nav-link" data-nav-link href="#work">Main Quest</a>
-        <a class="nav-link" data-nav-link href="#process">Story</a>
-        <a class="nav-link" data-nav-link href="#contact">Replay</a>
-      </div>
-
-      <button class="grid size-11 place-items-center border border-white/15 bg-white/5 text-white md:hidden"
-        type="button" aria-label="Open navigation" aria-expanded="false" data-menu-toggle>
-        <span class="h-4 w-5 border-y border-current"></span>
-      </button>
-    </nav>
-
-    <div class="mobile-menu border-t border-white/10 bg-void/95 md:hidden" data-mobile-menu>
-      <div class="shell grid gap-5 py-6">
-        <a class="nav-link" data-nav-link href="#home">Start</a>
-        <a class="nav-link" data-nav-link href="#about">Character</a>
-        <a class="nav-link" data-nav-link href="#work">Main Quest</a>
-        <a class="nav-link" data-nav-link href="#process">Story</a>
-        <a class="nav-link" data-nav-link href="#contact">Replay</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section id="home" class="hero flex items-center pt-24">
-      <div class="shell grid min-h-[calc(100svh-6rem)] items-center gap-10 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:py-20">
-        <div class="relative z-10 min-w-0 max-w-2xl">
-          <p class="eyebrow reveal">2026 portfolio</p>
-          <img class="hero-logo reveal mt-6 w-full max-w-[320px] sm:max-w-[470px]"
-            src="assets/artwork/hero-logo-plaque.png" width="1024" height="603" alt="Portfolio" />
-          <h1 class="reveal mt-6 font-display text-[clamp(4rem,12vw,10rem)] leading-[0.78] text-white">
-            Ng Hang
-          </h1>
-          <p class="soft-copy reveal mt-7 w-full max-w-[19rem] text-lg sm:max-w-xl">
-            Game artist building expressive characters, playful worlds, cinematic UI, and story-rich images with a
-            handmade cosmic pulse.
-          </p>
-          <div class="reveal mt-10 flex flex-wrap gap-4">
-            <a class="plaque-button magnetic" href="#work">Play</a>
-            <a class="plaque-button magnetic" href="#about">Character</a>
-          </div>
-        </div>
-
-        <div class="relative min-h-[520px] lg:min-h-[760px]" aria-hidden="true">
-          <img class="hero-planet absolute -right-24 top-28 w-[55vw] max-w-[690px] opacity-70 md:right-0"
-            src="assets/artwork/hero-portrait.png" width="720" height="935" alt="" data-parallax="-0.35" />
-          <img class="hero-astronaut absolute left-1/2 top-8 w-[78vw] max-w-[700px] -translate-x-1/2 lg:left-[46%]"
-            src="assets/artwork/hero-orbit.png" width="1274" height="1235" alt="" />
-          <img class="absolute bottom-0 left-0 hidden w-40 rotate-[-10deg] opacity-90 drop-shadow-2xl sm:block"
-            src="assets/artwork/hero-side-art.png" width="284" height="327" alt="" />
-          <div
-            class="absolute bottom-8 right-0 hidden rounded-full border border-aura/25 bg-aura/10 px-5 py-3 text-xs font-bold uppercase tracking-[0.3em] text-white/80 shadow-aura lg:block">
-            Visual quest unlocked
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="star-divider"></div>
-
-    <section class="relative flex min-h-screen items-center justify-center overflow-hidden py-16 lg:py-24">
-      <div class="shell relative z-10 flex flex-col items-center">
-        <div class="reveal w-full max-w-[800px] text-center">
-          <p class="eyebrow">Quest menu</p>
-          <h2 class="section-title mt-4 text-[clamp(2.2rem,6vw,4.5rem)]">Choose the route</h2>
-          <p class="soft-copy mt-6 mx-auto max-w-xl text-center">
-            Start with the artist profile, enter the main artwork quest, then move through the story boards and final
-            character moments.
-          </p>
-
-          <div class="relative mx-auto mt-12 w-full max-w-[380px]">
-            <img style="bottom: -40px;"
-              class="absolute left-1/2 -z-10 w-auto -translate-x-1/2 opacity-80 mix-blend-screen"
-              src="assets/artwork/galaxy-space.png" width="699" height="58" alt="" loading="lazy" decoding="async" />
-            <div class="relative">
-              <img class="w-full" src="assets/artwork/menu-board.png" width="639" height="639" alt="" loading="lazy"
-                decoding="async" />
-              <div class="absolute inset-0 flex flex-col items-center px-9 py-9 sm:px-12 sm:py-11">
-                <h3 class="font-display text-2xl uppercase tracking-wide text-white sm:text-3xl">Menu</h3>
-                <div class="mt-6 flex w-full flex-1 flex-col items-center justify-center gap-5">
-                  <a class="plaque-button magnetic w-full" href="#about">Character</a>
-                  <a class="plaque-button magnetic w-full" href="#work">Main Quest</a>
-                  <a class="plaque-button magnetic w-full" href="#process">Side Quest</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section-pad relative overflow-hidden">
-      <div class="shell grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
-        <div class="relative min-h-[620px] reveal">
-          <!-- <img class="absolute bottom-6 left-1/2 z-0 w-[60%] max-w-[380px] -translate-x-1/2 shadow-plaque"
-            src="assets/artwork/about-card-art.png" width="1816" height="866"
-            alt="Blue game artwork card from the Figma portfolio" loading="lazy" decoding="async" />
-          <img class="absolute left-1/2 top-0 z-10 w-[78%] max-w-[540px] -translate-x-1/2 drop-shadow-2xl"
-            src="assets/artwork/about-character.png" width="1115" height="1411"
-            alt="Ng Hang astronaut character illustration" loading="lazy" decoding="async" /> -->
-          <img class="absolute left-1/2 top-0 w-[78%] max-w-[420px] -translate-x-1/2 drop-shadow-2xl"
-            src="assets/artwork/base-stand-character.png" width="796" height="1109"
-            alt="Ng Hang astronaut character standing on a display base" loading="lazy" decoding="async" />
-        </div>
-
-        <div class="relative px-6 py-10 sm:px-10 lg:px-14 lg:py-16 reveal">
-          <img class="panel-bg" src="assets/artwork/about-panel.png" width="1024" height="1536" alt="" loading="lazy" />
-          <div class="relative z-10">
-            <p class="eyebrow">About me</p>
-            <h2 class="mt-4 font-display text-[clamp(2.5rem,8vw,5.7rem)] leading-none text-white">Artist profile</h2>
-            <p class="soft-copy mt-6">
-              My love for games and design is what motivates me to pursue a career in Game Art. I aspire to combine
-              artistic thinking, visual creativity, and a passion for games to create visually rich and emotionally
-              engaging experiences for players.
-            </p>
-            <p class="soft-copy mt-4">
-              With a spirit of learning, initiative, and responsibility, I hope to contribute to building high-quality
-              game products that provide enjoyable and memorable experiences for players.
-            </p>
-
-            <div class="mt-9 grid gap-4 sm:grid-cols-3">
-              <div class="glass-panel p-4">
-                <p class="text-2xl font-display text-aura">01</p>
-                <p class="mt-2 text-sm font-semibold text-white">Character art</p>
-              </div>
-              <div class="glass-panel p-4">
-                <p class="text-2xl font-display text-star">02</p>
-                <p class="mt-2 text-sm font-semibold text-white">Game UI</p>
-              </div>
-              <div class="glass-panel p-4">
-                <p class="text-2xl font-display text-ember">03</p>
-                <p class="mt-2 text-sm font-semibold text-white">Story scenes</p>
-              </div>
-            </div>
-
-            <div class="mt-9">
-              <p class="eyebrow mb-4">Skill kit</p>
-              <div class="flex flex-wrap items-center gap-4">
-                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-figma.png" width="1024"
-                  height="1024" alt="Figma skill icon" loading="lazy" />
-                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-oip.png" width="474" height="474"
-                  alt="Digital art tool icon" loading="lazy" />
-                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-app.png" width="1448"
-                  height="1086" alt="Art application icon" loading="lazy" />
-                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-skill-01.png" width="1254"
-                  height="1254" alt="Game art skill badge" loading="lazy" />
-                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-skill-02.png" width="1254"
-                  height="1254" alt="Game art skill badge" loading="lazy" />
-                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-skill-03.png" width="1254"
-                  height="1254" alt="Game art skill badge" loading="lazy" />
-                <img class="size-12 rounded bg-white/10 p-1" src="assets/artwork/tool-skill-04.png" width="1254"
-                  height="1254" alt="Game art skill badge" loading="lazy" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="section-pad">
-      <div class="shell">
-        <div class="max-w-3xl reveal">
-          <p class="eyebrow">Main quest</p>
-          <h2 class="section-title mt-4">Featured worlds</h2>
-          <p class="soft-copy mt-6">
-            Large cinematic frames lead each project, with character sheets, environment studies, props, UI moments, and
-            story scenes gathered like discoveries along the path.
-          </p>
-        </div>
-      </div>
-
-      <article class="mt-12">
-        <div class="project-hero relative overflow-hidden">
-          <img class="absolute inset-0 h-full w-full object-cover" src="assets/artwork/feel-cover.png" width="1920"
-            height="1080" alt="FEEL game cover artwork" loading="lazy" decoding="async" />
-          <div class="shell relative z-10 flex min-h-[inherit] items-end pb-12">
-            <div class="max-w-3xl reveal">
-              <p class="eyebrow">Healing adventure game</p>
-              <h3 class="font-display text-[clamp(4rem,12vw,9rem)] leading-none text-white">FEEL</h3>
-              <p class="soft-copy mt-5 max-w-2xl">
-                Feel follows Lino, a lonely boy adrift in space who has lost all his emotions. With a magical
-                paintbrush, he enters his inner world and pieces together forgotten fragments of feeling.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="shell mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          <figure class="project-card reveal md:col-span-2 lg:col-span-2" data-lightbox
-            data-caption="FEEL intro cutscene">
-            <img src="assets/artwork/feel-intro-cutscene.png" width="1920" height="1080"
-              alt="FEEL intro cutscene artwork" loading="lazy" decoding="async" />
-            <figcaption>Intro cutscene</figcaption>
-          </figure>
-          <figure class="project-card reveal" data-lightbox data-caption="Lino main character sheet">
-            <img src="assets/artwork/feel-main-character.png" width="1920" height="1080" alt="Lino main character sheet"
-              loading="lazy" decoding="async" />
-            <figcaption>Main character</figcaption>
-          </figure>
-          <figure class="project-card reveal" data-lightbox data-caption="Lino run animation sheet">
-            <img src="assets/artwork/feel-run-sheet.png" width="1920" height="1080" alt="Lino run animation sheet"
-              loading="lazy" decoding="async" />
-            <figcaption>Run animation</figcaption>
-          </figure>
-          <figure class="project-card reveal lg:col-span-2" data-lightbox data-caption="FEEL platform environment">
-            <img src="assets/artwork/feel-platform.png" width="4096" height="369" alt="FEEL platform environment strip"
-              loading="lazy" decoding="async" />
-            <figcaption>Platform environment</figcaption>
-          </figure>
-          <figure class="project-card reveal" data-lightbox data-caption="Emotion elements system">
-            <img src="assets/artwork/feel-elements-board.png" width="1920" height="1080"
-              alt="FEEL emotion element system board" loading="lazy" decoding="async" />
-            <figcaption>Element system</figcaption>
-          </figure>
-          <figure class="project-card reveal" data-lightbox data-caption="FEEL bosses">
-            <img src="assets/artwork/feel-bosses.png" width="1920" height="1080" alt="FEEL boss concept lineup"
-              loading="lazy" decoding="async" />
-            <figcaption>Boss concepts</figcaption>
-          </figure>
-        </div>
-      </article>
-
-      <article class="shell mt-24 grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
-        <div class="reveal">
-          <p class="eyebrow">Boss design</p>
-          <h3 class="section-title mt-4 text-[clamp(2.6rem,7vw,5.4rem)]">Verdant Awaken</h3>
-          <p class="soft-copy mt-6">
-            A darker fantasy cluster built from layered boss silhouettes, root forms, and forest fragments, gathered
-            into a dense concept board with a sharp center of gravity.
-          </p>
-        </div>
-        <div class="grid grid-cols-6 gap-4">
-          <figure class="project-card tilt-card col-span-3 aspect-[1.18] reveal" data-tilt data-lightbox
-            data-caption="Verdant Awaken boss study 01">
-            <img src="assets/artwork/verdant-boss-01.png" width="634" height="534" alt="Verdant Awaken boss study"
-              loading="lazy" decoding="async" />
-          </figure>
-          <figure class="project-card tilt-card col-span-3 aspect-[1.18] reveal" data-tilt data-lightbox
-            data-caption="Verdant Awaken boss study 02">
-            <img src="assets/artwork/verdant-boss-02.png" width="634" height="534" alt="Verdant Awaken boss study"
-              loading="lazy" decoding="async" />
-          </figure>
-          <figure class="project-card tilt-card col-span-2 aspect-square reveal" data-tilt data-lightbox
-            data-caption="Verdant Awaken root back layer">
-            <img src="assets/artwork/verdant-root-back.png" width="1920" height="1080" alt="Root concept back layer"
-              loading="lazy" decoding="async" />
-          </figure>
-          <figure class="project-card tilt-card col-span-2 aspect-square reveal" data-tilt data-lightbox
-            data-caption="Verdant Awaken mood scene">
-            <img src="assets/artwork/verdant-mood.png" width="1920" height="1080" alt="Verdant Awaken mood scene"
-              loading="lazy" decoding="async" />
-          </figure>
-          <figure class="project-card tilt-card col-span-2 aspect-square reveal" data-tilt data-lightbox
-            data-caption="Verdant Awaken root front layer">
-            <img src="assets/artwork/verdant-root-front.png" width="1920" height="1080" alt="Root concept front layer"
-              loading="lazy" decoding="async" />
-          </figure>
-        </div>
-      </article>
-
-      <article class="mt-24">
-        <div class="project-hero relative overflow-hidden">
-          <img class="absolute inset-0 h-full w-full object-cover" src="assets/artwork/self-cover.png" width="1920"
-            height="1080" alt="SELF: Under the Smile title screen artwork" loading="lazy" decoding="async" />
-          <div class="shell relative z-10 flex min-h-[inherit] items-end pb-12">
-            <div class="max-w-3xl reveal">
-              <p class="eyebrow">Character and mood</p>
-              <h3 class="font-display text-[clamp(2.8rem,8vw,6rem)] leading-none text-white">SELF: Under the Smile</h3>
-              <p class="soft-copy mt-5 max-w-2xl">
-                A theatrical project with soft horror, hand-drawn stars, paper props, and a playful mask language. Slow
-                pacing lets the unsettling charm sit on screen a little longer.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="shell mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          <figure class="project-card reveal" data-lightbox data-caption="SELF character variation">
-            <img src="assets/artwork/self-clown-a.png" width="415" height="595" alt="SELF clown character concept"
-              loading="lazy" decoding="async" />
-            <figcaption>Character A</figcaption>
-          </figure>
-          <figure class="project-card reveal" data-lightbox data-caption="SELF character variation">
-            <img src="assets/artwork/self-clown-b.png" width="427" height="648" alt="SELF clown character concept"
-              loading="lazy" decoding="async" />
-            <figcaption>Character B</figcaption>
-          </figure>
-          <figure class="project-card reveal lg:col-span-2" data-lightbox data-caption="SELF story panel 01">
-            <img src="assets/artwork/self-panel-01.png" width="945" height="945" alt="SELF square story panel artwork"
-              loading="lazy" decoding="async" />
-            <figcaption>Panel study</figcaption>
-          </figure>
-          <figure class="project-card reveal lg:col-span-2" data-lightbox data-caption="SELF story panel 02">
-            <img src="assets/artwork/self-panel-02.png" width="945" height="945" alt="SELF square story panel artwork"
-              loading="lazy" decoding="async" />
-            <figcaption>Panel study</figcaption>
-          </figure>
-          <figure class="project-card reveal lg:col-span-2" data-lightbox data-caption="FEEL app icon">
-            <img src="assets/artwork/feel-app-icon.png" width="1024" height="1024" alt="FEEL app icon illustration"
-              loading="lazy" decoding="async" />
-            <figcaption>App icon</figcaption>
-          </figure>
-        </div>
-      </article>
-    </section>
-
-    <section id="process" class="section-pad relative overflow-hidden">
-      <div class="shell">
-        <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-          <div class="reveal">
-            <p class="eyebrow">Side quest</p>
-            <h2 class="section-title mt-4">Storytelling</h2>
-          </div>
-          <p class="soft-copy reveal max-w-xl lg:justify-self-end">
-            The final stretch slows down into storyboard rhythm: wide shots, chapter moments, and a last playable
-            feeling of "again?".
-          </p>
-        </div>
-
-        <div class="mt-12 grid gap-5">
-          <figure class="project-card masked-reveal" data-lightbox data-caption="Storytelling cover scene">
-            <img src="assets/artwork/story-cover.png" width="1920" height="1080" alt="Storytelling cover scene"
-              loading="lazy" decoding="async" />
-            <figcaption>Chapter cover</figcaption>
-          </figure>
-          <div class="grid gap-5 md:grid-cols-3">
-            <figure class="project-card reveal" data-lightbox data-caption="Chapter study 01">
-              <img src="assets/artwork/story-chapter-01.png" width="1920" height="1080" alt="Storytelling chapter study"
-                loading="lazy" decoding="async" />
-              <figcaption>Chapter 01</figcaption>
-            </figure>
-            <figure class="project-card reveal" data-lightbox data-caption="Chapter study 02">
-              <img src="assets/artwork/story-chapter-02.png" width="1920" height="1080" alt="Storytelling chapter study"
-                loading="lazy" decoding="async" />
-              <figcaption>Chapter 02</figcaption>
-            </figure>
-            <figure class="project-card reveal" data-lightbox data-caption="Chapter study 03">
-              <img src="assets/artwork/story-chapter-03.png" width="980" height="931" alt="Storytelling chapter study"
-                loading="lazy" decoding="async" />
-              <figcaption>Chapter 03</figcaption>
-            </figure>
-          </div>
-          <div class="grid gap-5 lg:grid-cols-2">
-            <figure class="project-card masked-reveal" data-lightbox data-caption="Wide storytelling scene">
-              <img src="assets/artwork/story-wide-01.png" width="1920" height="1080" alt="Wide storytelling scene"
-                loading="lazy" decoding="async" />
-              <figcaption>Wide scene</figcaption>
-            </figure>
-            <figure class="project-card masked-reveal" data-lightbox data-caption="Final storytelling image">
-              <img src="assets/artwork/story-wide-02.png" width="1920" height="1080" alt="Final storytelling scene"
-                loading="lazy" decoding="async" />
-              <figcaption>Final frame</figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section-pad relative overflow-hidden">
-      <div class="shell grid items-center gap-10 lg:grid-cols-[1fr_0.9fr]">
-        <div class="relative reveal">
-          <img class="mx-auto w-full max-w-[560px] drop-shadow-2xl" src="assets/artwork/closing-portrait.png"
-            width="739" height="699" alt="Ng Hang illustrated closing portrait" loading="lazy" decoding="async" />
-          <img class="absolute -left-6 bottom-0 hidden w-32 rotate-[-18deg] sm:block"
-            src="assets/artwork/closing-orb-left.png" width="437" height="435" alt="" loading="lazy" />
-        </div>
-        <div class="reveal">
-          <p class="eyebrow">Play again?</p>
-          <h2 class="section-title mt-4">Thank you</h2>
-          <p class="soft-copy mt-6 max-w-xl">
-            Soft cosmic energy, character charm, and story-first pacing carry the final screen back toward the
-            beginning.
-          </p>
-          <div class="mt-9 flex flex-wrap gap-4">
-            <a class="plaque-button magnetic" href="#home">Play again</a>
-            <a class="plaque-button magnetic" href="#work">View work</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-white/10 py-8">
-    <div
-      class="shell flex flex-col gap-3 text-xs uppercase tracking-[0.24em] text-white/50 sm:flex-row sm:items-center sm:justify-between">
-      <p>Ng Hang Portfolio</p>
-      <p>Game Art / Character / Story</p>
-    </div>
-  </footer>
-
-  <div class="lightbox" data-lightbox-modal role="dialog" aria-modal="true" aria-hidden="true"
-    aria-label="Artwork preview">
-    <div class="lightbox__dialog">
-      <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close preview">x</button>
-      <img class="lightbox__image" data-lightbox-image alt="" />
-      <p class="px-4 py-4 text-sm font-semibold text-white/78" data-lightbox-caption></p>
-    </div>
-  </div>
-
-  <script type="module" src="js/main.js"></script>
+  <script>
+    (function () {
+      var stage = document.querySelector('.stage');
+      var viewport = document.querySelector('.viewport');
+      var DESIGN_W = 1440;
+      var DESIGN_H = 22230;
+      function fit() {
+        var scale = Math.min(1, window.innerWidth / DESIGN_W);
+        stage.style.transform = 'translateX(-50%) scale(' + scale + ')';
+        viewport.style.height = (DESIGN_H * scale) + 'px';
+      }
+      window.addEventListener('resize', fit);
+      fit();
+    })();
+  </script>
 </body>
 
 </html>
