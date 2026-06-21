@@ -143,11 +143,11 @@
       <p class="t font-pop glow-white center" style="left:487px;top:6515px;width:465px;font-size:50px;z-index:3">MAIN CHARACTER</p>
       <div class="glow-blob" style="left:198px;top:6620px;width:243px;height:140px;background:radial-gradient(circle,rgba(96,173,255,0.3),transparent 70%)"></div>
       <p class="t font-pop glow-dark center" style="left:273px;top:6688px;width:93px;font-size:40px;z-index:3">LINO</p>
-      <img class="n fit-contain" style="left:81px;top:6775px;width:542px;height:524px;z-index:2" src="assets/artwork/feel-main-character.png" alt="Lino main character" />
+      <img class="n fit-contain anim-bob" style="left:81px;top:6775px;width:542px;height:524px;z-index:2" src="assets/artwork/feel-main-character.png" alt="Lino main character" />
       <p class="t font-pop glow-dark" style="left:635px;top:6705px;width:120px;font-size:32px;z-index:3">Idle</p>
-      <img class="n fit-contain" style="left:703px;top:6700px;width:639px;height:238px;z-index:2" src="assets/artwork/feel-idle-sheet.png" alt="Lino idle animation" />
+      <div class="n sprite" style="left:703px;top:6700px;width:639px;height:238px;z-index:2"><img class="fit-contain" src="assets/artwork/feel-idle-sheet.png" alt="Lino idle animation" /></div>
       <p class="t font-pop glow-dark" style="left:635px;top:7018px;width:120px;font-size:32px;z-index:3">Run</p>
-      <img class="n fit-contain" style="left:696px;top:6982px;width:662px;height:317px;z-index:2" src="assets/artwork/feel-run-sheet.png" alt="Lino run animation" />
+      <div class="n sprite" style="left:696px;top:6982px;width:662px;height:317px;z-index:2"><img class="fit-contain" src="assets/artwork/feel-run-sheet.png" alt="Lino run animation" /></div>
 
       <!-- ENVIRONMENTS / PLATFORM (106:333 + 106:354 + 106:345) -->
       <p class="t font-pop glow-white center" style="left:541px;top:7411px;width:357px;font-size:50px;z-index:3">ENVIRONMENTS</p>
@@ -176,7 +176,7 @@
 
       <!-- APP ICON (106:337 + 106:366) -->
       <p class="t font-pop glow-white center" style="left:613px;top:10636px;width:215px;font-size:50px;z-index:3">APP ICON</p>
-      <img class="n fit-contain" style="left:552px;top:10755px;width:342px;height:342px;z-index:2;border-radius:48px" src="assets/artwork/feel-app-icon.png" alt="FEEL app icon" />
+      <img class="n fit-contain anim-bob" style="left:552px;top:10755px;width:342px;height:342px;z-index:2;border-radius:48px" src="assets/artwork/feel-app-icon.png" alt="FEEL app icon" />
 
       <!-- TRAILER (106:338) -->
       <p class="t font-pop glow-white center" style="left:629px;top:11178px;width:183px;font-size:50px;z-index:3">TRAILER</p>
@@ -225,30 +225,16 @@
       <img class="n fit-cover" style="left:0;top:20327px;width:1426px;height:802px" src="assets/artwork/story-wide-02.png" alt="Final storytelling scene" />
 
       <!-- ============================== THANK YOU (y21194–22094) ============================== -->
-      <img class="n fit-contain" style="left:1074px;top:21194px;width:314px;height:313px;z-index:2" src="assets/artwork/closing-orb-left.png" alt="" />
-      <img class="n fit-contain" style="left:63px;top:21322px;width:257px;height:255px;z-index:2" src="assets/artwork/closing-orb-left.png" alt="" />
-      <img class="n fit-contain" style="left:422px;top:21287px;width:619px;height:586px;z-index:2" src="assets/artwork/closing-portrait.png" alt="Ng Hang closing portrait" />
+      <img class="n fit-contain anim-spin" style="left:1074px;top:21194px;width:314px;height:313px;z-index:2" src="assets/artwork/closing-orb-left.png" alt="" />
+      <img class="n fit-contain anim-spin-rev" style="left:63px;top:21322px;width:257px;height:255px;z-index:2" src="assets/artwork/closing-orb-left.png" alt="" />
+      <img class="n fit-contain anim-bob" style="left:422px;top:21287px;width:619px;height:586px;z-index:2" src="assets/artwork/closing-portrait.png" alt="Ng Hang closing portrait" />
       <p class="t font-pop glow-dark center" style="left:633px;top:21750px;width:200px;font-size:28px;z-index:3">PLAY AGAIN?</p>
       <img class="n fit-fill" style="left:355px;top:21775px;width:729px;height:319px;z-index:2" src="assets/artwork/hero-button-plaque.png" alt="" />
       <p class="t font-pop glow-white center" style="left:518px;top:21893px;width:404px;font-size:60px;z-index:3">THANK YOU!</p>
     </div>
   </div>
 
-  <script>
-    (function () {
-      var stage = document.querySelector('.stage');
-      var viewport = document.querySelector('.viewport');
-      var DESIGN_W = 1440;
-      var DESIGN_H = 22230;
-      function fit() {
-        var scale = Math.min(1, window.innerWidth / DESIGN_W);
-        stage.style.transform = 'translateX(-50%) scale(' + scale + ')';
-        viewport.style.height = (DESIGN_H * scale) + 'px';
-      }
-      window.addEventListener('resize', fit);
-      fit();
-    })();
-  </script>
+  <script type="module" src="js/polish.js"></script>
 </body>
 
 </html>
