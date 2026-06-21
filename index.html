@@ -18,20 +18,34 @@
 </head>
 
 <body>
-  <div class="viewport">
-    <div class="stage">
-      <div class="bg-stars"></div>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <img class="loader__logo" src="assets/artwork/hero-logo-plaque.png" alt="Portfolio" />
+      <div class="loader__bar"><span></span></div>
+      <p class="loader__text">Loading portfolio…</p>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <div class="viewport" id="viewport">
+    <div class="stage" id="stage">
+      <svg class="starfield" id="starfield" preserveAspectRatio="none" aria-hidden="true"></svg>
+      <div class="nebula nebula--1"></div>
+      <div class="nebula nebula--2"></div>
+      <div class="nebula nebula--3"></div>
 
       <!-- ============================== HERO (y0–1230) ============================== -->
       <!-- glow behind astronaut -->
       <div class="glow-blob" style="left:-67px;top:256px;width:853px;height:891px;background:radial-gradient(circle,rgba(96,173,255,0.28),transparent 70%)"></div>
 
       <!-- astronaut girl (106:375) -->
-      <img class="n fit-contain" style="left:0;top:88px;width:944px;height:916px;z-index:2" src="assets/artwork/hero-orbit.png" alt="Astronaut character floating in space" />
+      <img class="n fit-contain anim-float" style="left:0;top:88px;width:944px;height:916px;z-index:2" data-parallax="0.06" src="assets/artwork/hero-orbit.png" alt="Astronaut character floating in space" />
       <!-- earth planet (106:252) -->
-      <img class="n fit-contain" style="left:716px;top:596px;width:720px;height:935px" src="assets/artwork/hero-portrait.png" alt="" />
+      <img class="n fit-contain anim-bob" style="left:716px;top:596px;width:720px;height:935px" data-parallax="-0.04" src="assets/artwork/hero-portrait.png" alt="" />
       <!-- pink planet (106:290) -->
-      <img class="n fit-contain" style="left:-53px;top:840px;width:284px;height:327px" src="assets/artwork/hero-side-art.png" alt="" />
+      <img class="n fit-contain anim-bob-slow" style="left:-53px;top:840px;width:284px;height:327px" data-parallax="0.1" src="assets/artwork/hero-side-art.png" alt="" />
       <!-- PORTFOLIO logo (106:289) -->
       <img class="n fit-contain" style="left:733px;top:205px;width:553px;height:129px;z-index:3" src="assets/artwork/hero-logo-plaque.png" alt="Portfolio" />
       <!-- 2026 (106:297) -->
