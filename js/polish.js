@@ -14,7 +14,10 @@ const loader = document.getElementById("loader");
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = window.matchMedia("(min-width: 900px) and (pointer: fine)").matches;
-const smooth = finePointer && !reduceMotion;
+/* Native scrolling is used for reliability: the transform-based smooth-scroll
+   broke painting of sections translated below the hero. Parallax + reveal run
+   on the native scroll position instead. */
+const smooth = false;
 
 let scale = 1;
 
@@ -180,7 +183,7 @@ function applyScroll() {
   const p = Math.min(1, target / maxScroll());
   progress.style.transform = `scaleX(${p})`;
   // parallax: starfield lags behind content for depth
-  starfield.style.transform = `translateY(${current * 0.18}px)`;
+  starfield.style.transform = `translateY(${current * 0.05}px)`;
 }
 
 function rafScroll() {
