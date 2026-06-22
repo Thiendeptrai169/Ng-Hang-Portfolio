@@ -26,23 +26,34 @@ function buildStarfield() {
   starfield.setAttribute("viewBox", `0 0 ${DESIGN_W} ${DESIGN_H}`);
   starfield.setAttribute("preserveAspectRatio", "none");
 
+  // star colours — mostly white, sprinkled with cool blues and warm tints
+  // so the field reads as a living galaxy rather than flat dots
+  const tint = () => {
+    const r = Math.random();
+    if (r < 0.68) return "#ffffff";
+    if (r < 0.80) return "#cfe0ff";
+    if (r < 0.88) return "#a9c6ff";
+    if (r < 0.95) return "#ffe7c7";
+    return "#ffd2d2";
+  };
+
   const COUNT = 620;
   const parts = [];
   for (let i = 0; i < COUNT; i++) {
     const x = Math.round(Math.random() * DESIGN_W);
     const y = Math.round(Math.random() * DESIGN_H);
     const r = (Math.random() * 1.4 + 0.4).toFixed(2);
-    const twinkles = Math.random() < 0.6;
+    const twinkles = Math.random() < 0.7;
     if (twinkles) {
       const dur = (Math.random() * 3 + 2).toFixed(2);
       const delay = (-Math.random() * 5).toFixed(2);
-      const min = (Math.random() * 0.25 + 0.1).toFixed(2);
+      const min = (Math.random() * 0.25 + 0.05).toFixed(2);
       const max = (Math.random() * 0.3 + 0.7).toFixed(2);
       parts.push(
-        `<circle class="star twinkle" cx="${x}" cy="${y}" r="${r}" style="--dur:${dur}s;--delay:${delay}s;--min:${min};--max:${max}"/>`
+        `<circle class="star twinkle" cx="${x}" cy="${y}" r="${r}" style="fill:${tint()};--dur:${dur}s;--delay:${delay}s;--min:${min};--max:${max}"/>`
       );
     } else {
-      parts.push(`<circle class="star" cx="${x}" cy="${y}" r="${r}" opacity="${(Math.random() * 0.4 + 0.3).toFixed(2)}"/>`);
+      parts.push(`<circle class="star" cx="${x}" cy="${y}" r="${r}" style="fill:${tint()};opacity:${(Math.random() * 0.4 + 0.3).toFixed(2)}"/>`);
     }
   }
   // a few brighter glow stars
@@ -51,10 +62,31 @@ function buildStarfield() {
     const y = Math.round(Math.random() * DESIGN_H);
     const r = (Math.random() * 1.4 + 1.4).toFixed(2);
     const dur = (Math.random() * 2 + 2.5).toFixed(2);
+    const c = tint();
     parts.push(
-      `<circle class="star twinkle" cx="${x}" cy="${y}" r="${r}" style="--dur:${dur}s;--delay:${(-Math.random() * 4).toFixed(2)}s;--min:0.3;--max:1;filter:drop-shadow(0 0 4px rgba(180,210,255,.9))"/>`
+      `<circle class="star twinkle" cx="${x}" cy="${y}" r="${r}" style="fill:${c};--dur:${dur}s;--delay:${(-Math.random() * 4).toFixed(2)}s;--min:0.3;--max:1;filter:drop-shadow(0 0 4px ${c})"/>`
     );
   }
+
+  // big bright "sparkle" stars — 4-point diffraction cross (plus shape)
+  // one roughly every ~4200px down the very tall canvas
+  const sparkleCount = Math.max(1, Math.round(DESIGN_H / 4200));
+  for (let i = 0; i < sparkleCount; i++) {
+    const cx = Math.round((0.12 + Math.random() * 0.76) * DESIGN_W);
+    const cy = Math.round(((i + 0.5) / sparkleCount + (Math.random() - 0.5) * 0.12) * DESIGN_H);
+    const R = Math.random() * 22 + 30;      // outer spike reach
+    const r = R * 0.1;                       // inner waist → thin sharp spikes
+    const dur = (Math.random() * 2 + 4).toFixed(2);
+    const delay = (-Math.random() * 4).toFixed(2);
+    const d =
+      `M ${cx} ${cy - R} L ${cx + r} ${cy - r} L ${cx + R} ${cy} L ${cx + r} ${cy + r} ` +
+      `L ${cx} ${cy + R} L ${cx - r} ${cy + r} L ${cx - R} ${cy} L ${cx - r} ${cy - r} Z`;
+    parts.push(
+      `<circle class="star" cx="${cx}" cy="${cy}" r="${(R * 0.12).toFixed(1)}" style="fill:#fff;filter:drop-shadow(0 0 6px rgba(190,215,255,.95))"/>` +
+      `<path class="sparkle" d="${d}" style="--dur:${dur}s;--delay:${delay}s"/>`
+    );
+  }
+
   starfield.innerHTML = parts.join("");
 }
 
@@ -229,19 +261,25 @@ function shootingStar() {
   if (reduceMotion) return;
   const star = document.createElement("div");
   star.className = "shooting-star";
-  // place within currently visible stage region
-  const top = current / scale + (Math.random() * 0.5) * (window.innerHeight / scale);
-  const left = (0.4 + Math.random() * 0.55) * DESIGN_W;
+  // Travel as a single straight line: the trail (::after) extends backwards
+  // along the element's local -x, so rotating + translating along that same
+  // axis keeps head, tail and motion collinear — the tail always trails behind.
+  const angle = 145 + Math.random() * 28;   // 145°–173° → falling down & to the left
+  const dist = 460 + Math.random() * 340;   // streak length
+  // spawn in the upper part of the visible region so it actually falls into view
+  const top = current / scale + (Math.random() * 0.3) * (window.innerHeight / scale);
+  const left = (0.35 + Math.random() * 0.55) * DESIGN_W;
   star.style.left = left + "px";
   star.style.top = top + "px";
   stage.appendChild(star);
   star.animate(
     [
-      { transform: "translate(0,0) rotate(18deg)", opacity: 0 },
-      { opacity: 1, offset: 0.15 },
-      { transform: "translate(-360px,150px) rotate(18deg)", opacity: 0 }
+      { transform: `rotate(${angle}deg) translateX(0)`, opacity: 0 },
+      { opacity: 1, offset: 0.1 },
+      { opacity: 1, offset: 0.82 },
+      { transform: `rotate(${angle}deg) translateX(${dist}px)`, opacity: 0 }
     ],
-    { duration: 900 + Math.random() * 500, easing: "ease-out" }
+    { duration: 700 + Math.random() * 500, easing: "cubic-bezier(0.55, 0.05, 0.9, 0.7)" }
   ).onfinish = () => star.remove();
   setTimeout(shootingStar, 4500 + Math.random() * 6000);
 }

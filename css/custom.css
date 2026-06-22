@@ -319,6 +319,21 @@ img.n {
   50% { opacity: var(--max, 1); }
 }
 
+/* big bright 4-point sparkle (plus / diffraction cross) */
+.starfield .sparkle {
+  fill: #fff;
+  filter: drop-shadow(0 0 8px rgba(200, 222, 255, 0.95));
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: sparkle-pulse var(--dur, 5s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes sparkle-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(0.78) rotate(0deg); }
+  50%      { opacity: 1;    transform: scale(1.12) rotate(45deg); }
+}
+
 .shooting-star {
   position: absolute;
   z-index: 0;
@@ -336,10 +351,12 @@ img.n {
   position: absolute;
   top: 50%;
   right: 0;
-  width: 140px;
-  height: 1px;
+  width: 150px;
+  height: 2px;
   transform: translateY(-50%);
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), transparent);
+  /* bright at the head (right, where the dot is), fading out toward the back */
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.95), rgba(173, 200, 255, 0.35) 45%, transparent);
+  border-radius: 2px;
 }
 
 .nebula {
@@ -349,16 +366,18 @@ img.n {
   filter: blur(70px);
   opacity: 0.5;
   pointer-events: none;
-  animation: nebula-pulse 12s ease-in-out infinite;
+  animation: nebula-pulse 16s ease-in-out infinite;
 }
 
-.nebula--1 { left: 60px; top: 4400px; width: 900px; height: 900px; background: radial-gradient(circle, rgba(150, 60, 200, 0.4), transparent 65%); }
-.nebula--2 { left: 700px; top: 12200px; width: 800px; height: 800px; background: radial-gradient(circle, rgba(46, 133, 255, 0.32), transparent 65%); animation-delay: -4s; }
-.nebula--3 { left: 200px; top: 18500px; width: 900px; height: 900px; background: radial-gradient(circle, rgba(245, 100, 60, 0.28), transparent 65%); animation-delay: -8s; }
+.nebula--1 { left: 60px; top: 4400px; width: 900px; height: 900px; background: radial-gradient(circle, rgba(150, 60, 200, 0.45), transparent 65%); }
+.nebula--2 { left: 700px; top: 12200px; width: 800px; height: 800px; background: radial-gradient(circle, rgba(46, 133, 255, 0.36), transparent 65%); animation-delay: -5s; animation-duration: 19s; }
+.nebula--3 { left: 200px; top: 18500px; width: 900px; height: 900px; background: radial-gradient(circle, rgba(245, 100, 60, 0.3), transparent 65%); animation-delay: -9s; animation-duration: 22s; }
+.nebula--4 { left: 760px; top: 8200px; width: 760px; height: 760px; background: radial-gradient(circle, rgba(40, 200, 170, 0.28), transparent 65%); animation-delay: -13s; animation-duration: 18s; }
 
 @keyframes nebula-pulse {
-  0%, 100% { opacity: 0.35; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.12); }
+  0%   { opacity: 0.38; transform: scale(1) translate(0, 0); }
+  50%  { opacity: 0.62; transform: scale(1.14) translate(36px, -28px); }
+  100% { opacity: 0.38; transform: scale(1) translate(0, 0); }
 }
 
 /* ---------- Idle floating ---------- */
