@@ -119,20 +119,25 @@ function setupLinoCharacter() {
   const portrait = document.getElementById("linoPortrait");
   const idle = document.getElementById("linoSprite");
   const run = document.getElementById("linoRunSprite");
-  const cards = stage.querySelectorAll("[data-lino-anim]");
+  const cards = Array.from(stage.querySelectorAll("[data-lino-anim]"));
   if (!portrait || !idle || !run || !cards.length) return;
 
-  const stop = () => {
+  const CYCLE_MS = 2400; // how long each box stays "active" while auto-playing
+  let autoTimer = null;
+  let autoIndex = 0;
+  let hovering = false;
+
+  const stopSprites = () => {
     idle.classList.remove("is-playing", "is-visible");
     run.classList.remove("is-running", "is-visible");
-    portrait.classList.remove("is-dim");
   };
 
-  const play = (anim) => {
-    stop();
+  // Play one box's animation on the big Lino and mark that box active.
+  const show = (card) => {
+    stopSprites();
+    const anim = card.dataset.linoAnim;
     if (anim === "run") {
-      // restart the keyframes so the cycle begins at frame 0
-      void run.offsetWidth;
+      void run.offsetWidth; // restart keyframes at frame 0
       run.classList.add("is-running", "is-visible");
     } else {
       idle.classList.remove("row-top", "row-bottom");
@@ -141,12 +146,46 @@ function setupLinoCharacter() {
       idle.classList.add("is-playing", "is-visible");
     }
     portrait.classList.add("is-dim");
+    cards.forEach((c) => c.classList.toggle("is-active", c === card));
+  };
+
+  const tick = () => {
+    if (hovering) return;
+    show(cards[autoIndex % cards.length]);
+    autoIndex += 1;
+  };
+
+  const startAuto = (immediate) => {
+    if (autoTimer || reduceMotion || hovering) return;
+    if (immediate) tick();
+    autoTimer = window.setInterval(tick, CYCLE_MS);
+  };
+  const stopAuto = () => {
+    window.clearInterval(autoTimer);
+    autoTimer = null;
   };
 
   cards.forEach((card) => {
-    card.addEventListener("pointerenter", () => play(card.dataset.linoAnim));
-    card.addEventListener("pointerleave", stop);
+    card.addEventListener("pointerenter", () => {
+      hovering = true;
+      stopAuto();
+      show(card);
+      autoIndex = cards.indexOf(card) + 1; // resume from the next box afterwards
+    });
+    card.addEventListener("pointerleave", () => {
+      hovering = false;
+      startAuto(false); // keep current box until the next interval, then carry on
+    });
   });
+
+  // Don't burn cycles when the tab is hidden.
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stopAuto();
+    else startAuto(false);
+  });
+
+  // Let the portrait greet first, then begin the auto demo.
+  window.setTimeout(() => startAuto(true), 1200);
 }
 
 /* ---------- 5. Custom cursor ---------- */

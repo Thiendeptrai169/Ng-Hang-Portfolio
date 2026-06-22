@@ -90,7 +90,7 @@
       <!-- title banner + CHARACTER heading (106:292 + 106:299) -->
       <img class="n fit-fill" style="left:489px;top:2103px;width:462px;height:189px;z-index:1"
         src="assets/artwork/hero-button-plaque.png" alt="" />
-      <p class="t font-pop glow-dark center" style="left:576px;top:2160px;width:317px;font-size:50px;z-index:3">
+      <p class="t font-pop glow-dark center" style="left:550px;top:2160px;width:317px;font-size:50px;z-index:3">
         CHARACTER</p>
 
       <!-- avatar + Ng Hang (106:325 + 106:282) -->
@@ -143,7 +143,7 @@
       <!-- ============================== MAIN QUEST (y3624–3813) ============================== -->
       <img class="n fit-fill" style="left:489px;top:3624px;width:462px;height:189px;z-index:1"
         src="assets/artwork/hero-button-plaque.png" alt="" />
-      <p class="t font-pop glow-dark center" style="left:576px;top:3681px;width:317px;font-size:50px;z-index:3">MAIN
+      <p class="t font-pop glow-dark center" style="left:550px;top:3681px;width:317px;font-size:50px;z-index:3">MAIN
         QUEST</p>
 
       <!-- ============================== FEEL (y4104–11200) ============================== -->
@@ -184,21 +184,36 @@
       <!-- Sprites share the portrait's box (same top + bottom) so LINO stays put while it plays -->
       <div id="linoSprite" class="lino-sheet lino-sheet--big row-top"
         style="--fw:385px;--fh:650px;left:117px;top:6645px" aria-hidden="true"></div>
-      <div id="linoRunSprite" class="lino-run lino-sheet--big"
-        style="--fw:462px;--fh:650px;left:79px;top:6645px" aria-hidden="true"></div>
+      <div id="linoRunSprite" class="lino-run lino-sheet--big" style="--fw:462px;--fh:650px;left:79px;top:6645px"
+        aria-hidden="true"></div>
 
       <!-- Hover boxes: static filmstrips of the sprite sheets. Hover drives the big Lino on the left. -->
-      <div class="n lino-card" data-lino-anim="top" style="left:700px;top:6680px;width:560px;height:200px;z-index:2">
-        <span class="lino-card__label">IDLE 1</span>
-        <div class="lino-strip row-top"></div>
+      <div class="n lino-card" data-lino-anim="top" style="left:700px;top:6660px;width:560px;height:220px;z-index:2">
+        <div class="lino-card__head">
+          <span class="lino-card__tag">Idle 1</span>
+          <span class="lino-card__hint">Hover to play</span>
+        </div>
+        <div class="lino-card__screen">
+          <div class="lino-strip row-top"></div>
+        </div>
       </div>
-      <div class="n lino-card" data-lino-anim="bottom" style="left:700px;top:6895px;width:560px;height:200px;z-index:2">
-        <span class="lino-card__label">IDLE 2</span>
-        <div class="lino-strip row-bottom"></div>
+      <div class="n lino-card" data-lino-anim="bottom" style="left:700px;top:6890px;width:560px;height:220px;z-index:2">
+        <div class="lino-card__head">
+          <span class="lino-card__tag">Idle 2</span>
+          <span class="lino-card__hint">Hover to play</span>
+        </div>
+        <div class="lino-card__screen">
+          <div class="lino-strip row-bottom"></div>
+        </div>
       </div>
-      <div class="n lino-card" data-lino-anim="run" style="left:700px;top:7110px;width:560px;height:200px;z-index:2">
-        <span class="lino-card__label">RUN</span>
-        <div class="lino-strip full"></div>
+      <div class="n lino-card" data-lino-anim="run" style="left:700px;top:7120px;width:560px;height:220px;z-index:2">
+        <div class="lino-card__head">
+          <span class="lino-card__tag">Run</span>
+          <span class="lino-card__hint">Hover to play</span>
+        </div>
+        <div class="lino-card__screen">
+          <div class="lino-strip full"></div>
+        </div>
       </div>
 
       <!-- ENVIRONMENTS / PLATFORM (106:333 + 106:354 + 106:345) -->
