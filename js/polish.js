@@ -3,7 +3,7 @@
    ============================================================ */
 
 const DESIGN_W = 1440;
-const DESIGN_H = 22230;
+const DESIGN_H = 20890;
 
 const stage = document.getElementById("stage");
 const viewport = document.getElementById("viewport");
@@ -104,12 +104,12 @@ function revealCheck() {
   });
 }
 
-/* ---------- 4. Hover interactions ---------- */
+/* ---------- 4. Hover interactions ----------
+   Hover feedback is reserved for things you can actually interact with
+   (buttons). Decorative title plaques and gallery artwork are left alone
+   so the page doesn't react under the cursor everywhere. */
 function setupHover() {
-  stage.querySelectorAll('img[src*="hero-button-plaque"]').forEach((e) => e.classList.add("btn-hover"));
-  stage
-    .querySelectorAll('.fit-cover, .sprite, img[src*="self-panel"], img[src*="menu-board"], img[src*="about-card-art"]')
-    .forEach((e) => e.classList.add("card-hover"));
+  stage.querySelectorAll(".js-btn").forEach((e) => e.classList.add("btn-hover"));
 }
 
 /* ---------- 5. Custom cursor ---------- */
@@ -128,12 +128,12 @@ function setupCursor() {
   window.addEventListener("mouseleave", () => cursor.classList.remove("is-visible"));
 
   document.addEventListener("mouseover", (e) => {
-    if (e.target.closest(".btn-hover, .card-hover, .skill-chip, .verdant-btn")) {
+    if (e.target.closest(".btn-hover, .skill-chip, .verdant-btn")) {
       cursor.classList.add("is-active");
     }
   });
   document.addEventListener("mouseout", (e) => {
-    if (e.target.closest(".btn-hover, .card-hover, .skill-chip, .verdant-btn")) {
+    if (e.target.closest(".btn-hover, .skill-chip, .verdant-btn")) {
       cursor.classList.remove("is-active");
     }
   });
