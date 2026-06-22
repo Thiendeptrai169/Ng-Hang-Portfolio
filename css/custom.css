@@ -91,6 +91,9 @@ img.n {
   z-index: 2;
   color: #fff;
   line-height: 1.05;
+  /* decorative text never intercepts the pointer — clicks pass through to
+     any interactive element (button / chip) sitting underneath it */
+  pointer-events: none;
 }
 
 .font-pop {
@@ -408,17 +411,21 @@ img.n {
 /* ---------- Scroll reveal ---------- */
 [data-reveal] {
   opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  filter: blur(12px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
 }
 
-[data-reveal].r-up { transform: translateY(46px); }
-[data-reveal].r-left { transform: translateX(-46px); }
-[data-reveal].r-right { transform: translateX(46px); }
-[data-reveal].r-zoom { transform: scale(0.9); }
+[data-reveal].r-up { transform: translateY(28px); }
+[data-reveal].r-left { transform: translateX(-32px); }
+[data-reveal].r-right { transform: translateX(32px); }
+[data-reveal].r-zoom { transform: scale(0.94); }
 
 [data-reveal].is-in {
   opacity: 1;
+  filter: blur(0);
   transform: none;
 }
 
@@ -438,15 +445,19 @@ img.n {
 .btn-hover:hover {
   filter: brightness(1.12) saturate(1.05);
 }
+/* press response — momentary dim, no shadow, keeps the same plane */
+.btn-hover:active { filter: brightness(0.92) saturate(1.08); }
 
 /* skill / tool tiles — self-contained interactive chips (no shadow) */
 .skill-chip { cursor: pointer; transition: transform 0.25s ease, background 0.25s ease; }
 .skill-chip:hover { transform: scale(1.06); background: rgba(255, 255, 255, 0.16); }
+.skill-chip:active { transform: scale(0.96); background: rgba(255, 255, 255, 0.22); }
 
 /* Verdant "Bắt đầu" button — its green glow is the resting style, not a
    hover drop-shadow, so we only brighten the tint on hover. */
-.verdant-btn { cursor: pointer; transition: background 0.2s ease, color 0.2s ease; }
+.verdant-btn { cursor: pointer; transition: background 0.2s ease, color 0.2s ease, transform 0.12s ease; }
 .verdant-btn:hover { background: rgba(82, 191, 42, 0.16); color: #fff; }
+.verdant-btn:active { background: rgba(82, 191, 42, 0.28); transform: scale(0.97); }
 
 /* ---------- Title glow pulse ---------- */
 .glow-white {
@@ -690,7 +701,7 @@ img.n {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
-  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; filter: none !important; }
   .lino-sheet.is-playing,
   .lino-run.is-running { animation: none !important; }
 }

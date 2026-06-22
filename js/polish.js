@@ -126,13 +126,21 @@ function setupReveal() {
 function revealCheck() {
   if (!revealItems.length) return;
   const vh = window.innerHeight;
+  const entering = [];
   revealItems = revealItems.filter((el) => {
     const r = el.getBoundingClientRect();
     if (r.top < vh * 0.92 && r.bottom > -40) {
-      el.classList.add("is-in");
+      entering.push({ el, top: r.top, left: r.left });
       return false;
     }
     return true;
+  });
+  if (!entering.length) return;
+  // stagger: items that enter together cascade in reading order (top→bottom, left→right)
+  entering.sort((a, b) => (a.top - b.top) || (a.left - b.left));
+  entering.forEach((item, i) => {
+    item.el.style.transitionDelay = Math.min(i, 8) * 75 + "ms";
+    item.el.classList.add("is-in");
   });
 }
 
@@ -142,6 +150,37 @@ function revealCheck() {
    so the page doesn't react under the cursor everywhere. */
 function setupHover() {
   stage.querySelectorAll(".js-btn").forEach((e) => e.classList.add("btn-hover"));
+
+  // click "pop" — a quick tactile bounce so every button confirms the press.
+  // WAAPI plays on top of any CSS hover transform and reverts cleanly when done.
+  const pop = (el) => {
+    if (reduceMotion) return;
+    el.animate(
+      [
+        { transform: "scale(1)" },
+        { transform: "scale(0.93)", offset: 0.4 },
+        { transform: "scale(1)" }
+      ],
+      { duration: 240, easing: "cubic-bezier(0.34, 1.56, 0.64, 1)" }
+    );
+  };
+  stage.querySelectorAll(".js-btn, .skill-chip, .verdant-btn").forEach((el) => {
+    el.addEventListener("click", () => pop(el));
+  });
+}
+
+/* ---------- 4c. Menu navigation ----------
+   Menu buttons carry a data-nav-y design-space target. The stage scales from
+   its top edge (transform-origin: top center), so document scroll = Y * scale. */
+function setupNav() {
+  const MARGIN = 40; // design-space breathing room above the target heading
+  stage.querySelectorAll("[data-nav-y]").forEach((btn) => {
+    btn.style.cursor = "pointer";
+    btn.addEventListener("click", () => {
+      const y = (parseFloat(btn.getAttribute("data-nav-y")) - MARGIN) * scale;
+      window.scrollTo({ top: Math.max(0, y), behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  });
 }
 
 /* ---------- 4b. Lino sprite-sheet hover ----------
@@ -335,6 +374,7 @@ setupScroll();   // creates the scroll spacer (must exist before fit sets its he
 fit();
 setupReveal();
 setupHover();
+setupNav();
 setupLinoCharacter();
 setupCursor();
 window.addEventListener("resize", () => { fit(); revealCheck(); });
