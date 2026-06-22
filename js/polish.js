@@ -112,6 +112,43 @@ function setupHover() {
   stage.querySelectorAll(".js-btn").forEach((e) => e.classList.add("btn-hover"));
 }
 
+/* ---------- 4b. Lino sprite-sheet hover ----------
+   Hovering a box on the right plays its row of feel-idle-sheet on the big
+   Lino portrait at the left (top row = Idle, bottom row = Walk). */
+function setupLinoCharacter() {
+  const portrait = document.getElementById("linoPortrait");
+  const idle = document.getElementById("linoSprite");
+  const run = document.getElementById("linoRunSprite");
+  const cards = stage.querySelectorAll("[data-lino-anim]");
+  if (!portrait || !idle || !run || !cards.length) return;
+
+  const stop = () => {
+    idle.classList.remove("is-playing", "is-visible");
+    run.classList.remove("is-running", "is-visible");
+    portrait.classList.remove("is-dim");
+  };
+
+  const play = (anim) => {
+    stop();
+    if (anim === "run") {
+      // restart the keyframes so the cycle begins at frame 0
+      void run.offsetWidth;
+      run.classList.add("is-running", "is-visible");
+    } else {
+      idle.classList.remove("row-top", "row-bottom");
+      idle.classList.add(anim === "bottom" ? "row-bottom" : "row-top");
+      void idle.offsetWidth;
+      idle.classList.add("is-playing", "is-visible");
+    }
+    portrait.classList.add("is-dim");
+  };
+
+  cards.forEach((card) => {
+    card.addEventListener("pointerenter", () => play(card.dataset.linoAnim));
+    card.addEventListener("pointerleave", stop);
+  });
+}
+
 /* ---------- 5. Custom cursor ---------- */
 function setupCursor() {
   if (!finePointer) return;
@@ -221,6 +258,7 @@ setupScroll();   // creates the scroll spacer (must exist before fit sets its he
 fit();
 setupReveal();
 setupHover();
+setupLinoCharacter();
 setupCursor();
 window.addEventListener("resize", () => { fit(); revealCheck(); });
 window.addEventListener("load", () => {

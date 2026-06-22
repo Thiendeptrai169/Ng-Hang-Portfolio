@@ -152,8 +152,8 @@
         src="assets/artwork/feel-cover.png" alt="FEEL game cover" />
       <!-- FEEL title plaque + word (106:376 + 106:377) -->
       <img class="n fit-fill" style="left:478px;top:3967px;width:514px;height:225px;z-index:2"
-        src="assets/artwork/hero-button-plaque.png" alt="" />
-      <p class="t font-pop glow-white center" style="left:478px;top:4008px;width:514px;font-size:96px;z-index:3">FEEL
+        src="assets/artwork/ui-frame-plaque.png" alt="" />
+      <p class="t font-pop glow-white center" style="left:478px;top:4032px;width:514px;font-size:96px;z-index:3">FEEL
       </p>
 
       <!-- FEEL description (106:330) -->
@@ -178,15 +178,28 @@
         style="left:198px;top:6620px;width:243px;height:140px;background:radial-gradient(circle,rgba(96,173,255,0.3),transparent 70%)">
       </div>
       <p class="t font-pop glow-dark center" style="left:273px;top:6636px;width:93px;font-size:40px;z-index:3">LINO</p>
-      <img class="n fit-cover anim-bob"
+      <img id="linoPortrait" class="n fit-cover lino-portrait"
         style="left:60px;top:6645px;width:500px;height:650px;object-position:50% 62%;z-index:2"
         src="assets/artwork/feel-main-character.png" alt="Lino main character" />
-      <p class="t font-pop glow-dark" style="left:635px;top:6705px;width:120px;font-size:32px;z-index:3">Idle</p>
-      <div class="n sprite" style="left:703px;top:6700px;width:639px;height:238px;z-index:2"><img class="fit-contain"
-          src="assets/artwork/feel-idle-sheet.png" alt="Lino idle animation" /></div>
-      <p class="t font-pop glow-dark" style="left:635px;top:7018px;width:120px;font-size:32px;z-index:3">Run</p>
-      <div class="n sprite" style="left:696px;top:6982px;width:662px;height:317px;z-index:2"><img class="fit-contain"
-          src="assets/artwork/feel-run-sheet.png" alt="Lino run animation" /></div>
+      <!-- Sprites share the portrait's box (same top + bottom) so LINO stays put while it plays -->
+      <div id="linoSprite" class="lino-sheet lino-sheet--big row-top"
+        style="--fw:385px;--fh:650px;left:117px;top:6645px" aria-hidden="true"></div>
+      <div id="linoRunSprite" class="lino-run lino-sheet--big"
+        style="--fw:462px;--fh:650px;left:79px;top:6645px" aria-hidden="true"></div>
+
+      <!-- Hover boxes: static filmstrips of the sprite sheets. Hover drives the big Lino on the left. -->
+      <div class="n lino-card" data-lino-anim="top" style="left:700px;top:6680px;width:560px;height:200px;z-index:2">
+        <span class="lino-card__label">IDLE 1</span>
+        <div class="lino-strip row-top"></div>
+      </div>
+      <div class="n lino-card" data-lino-anim="bottom" style="left:700px;top:6895px;width:560px;height:200px;z-index:2">
+        <span class="lino-card__label">IDLE 2</span>
+        <div class="lino-strip row-bottom"></div>
+      </div>
+      <div class="n lino-card" data-lino-anim="run" style="left:700px;top:7110px;width:560px;height:200px;z-index:2">
+        <span class="lino-card__label">RUN</span>
+        <div class="lino-strip full"></div>
+      </div>
 
       <!-- ENVIRONMENTS / PLATFORM (106:333 + 106:354 + 106:345) -->
       <p class="t font-pop glow-white center" style="left:541px;top:7411px;width:357px;font-size:50px;z-index:3">
@@ -271,8 +284,8 @@
       <img class="n fit-cover" style="left:0;top:14021px;width:1480px;height:832px" src="assets/artwork/self-cover.png"
         alt="SELF: Under the Smile cover" />
       <img class="n fit-fill" style="left:425px;top:13719px;width:592px;height:259px;z-index:2"
-        src="assets/artwork/hero-button-plaque.png" alt="" />
-      <p class="t font-pop glow-white center" style="left:425px;top:13819px;width:592px;font-size:40px;z-index:3">SELF:
+        src="assets/artwork/ui-frame-plaque.png" alt="" />
+      <p class="t font-pop glow-white center" style="left:425px;top:13832px;width:592px;font-size:40px;z-index:3">SELF:
         UNDER THE SMILE</p>
 
       <p class="t font-pop glow-white center" style="left:530px;top:14980px;width:379px;font-size:64px;z-index:3">
